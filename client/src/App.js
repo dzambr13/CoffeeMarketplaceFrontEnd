@@ -6,10 +6,14 @@ import Shop from './pages/Shop'
 import User from './pages/User'
 import Auth from './pages/Auth'
 import axios from 'axios'
+import Nav from './components/Nav'
 
 export const App = () => {
   return (
     <div className="App">
+      <header>
+        <Nav />
+      </header>
       <main>
         <Routes>
           <Route path='/' element={<Home/>} /> 
