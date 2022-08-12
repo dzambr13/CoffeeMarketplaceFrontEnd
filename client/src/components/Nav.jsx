@@ -29,3 +29,5 @@ const Nav = ({ authenticated, user, handleLogout }) => {
         </header>
     )
 }
+
+export default Nav
