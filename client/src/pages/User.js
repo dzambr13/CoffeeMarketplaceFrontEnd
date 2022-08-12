@@ -1,11 +1,13 @@
-const User=()=>{
+import { Link } from "react-router-dom";
 
+const User = () => {
+  return (
+    <div className="user">
+      <p>USER</p>
+      <Link to="/"> home </Link>
+      <Link to="/shop"> shop </Link>
+    </div>
+  );
+};
 
-    return (
-        <div className='user'>
-            USER 
-        </div>
-    )
-}
-
-export default User 
+export default User;

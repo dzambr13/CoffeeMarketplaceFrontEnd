@@ -1,11 +1,12 @@
-const Auth=()=>{
+import { Link } from "react-router-dom";
 
+const Auth = () => {
+  return (
+    <div className="auth">
+      <p>Auth</p>
+      <Link to="/">Home</Link>
+    </div>
+  );
+};
 
-    return (
-        <div className='auth'>
-            AUTH
-        </div>
-    )
-}
-
-export default Auth
+export default Auth;
