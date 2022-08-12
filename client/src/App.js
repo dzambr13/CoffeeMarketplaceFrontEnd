@@ -1,9 +1,22 @@
 import "./App.css"
+import React,{useState} from 'react'
+import {Routes,Route} from 'react-router-dom'
+
+
 
 export const App=()=>{
 
   return (
-    <div></div>
+
+    <div className='App'>
+      <header></header>
+      <main>
+        <Routes>
+          <Route path='/' element={<Home/>} />
+        </Routes>
+      </main>
+    </div>
+
   )
 }
 
