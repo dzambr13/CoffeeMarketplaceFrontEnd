@@ -43,5 +43,6 @@ const handleSubmit = async (event) => {
 
 return (
     //Conditionally render roaster or member singup
+    <div></div>
 )
 export default SignUp;
