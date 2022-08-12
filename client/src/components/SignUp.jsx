@@ -1,4 +1,4 @@
-import "./App.css";
+
 import { useState, useEffect } from "react";
 import axios from 'axios';
 
@@ -12,8 +12,15 @@ const SignUp = () => {
         password: "",
         location: ""
     }
+
+    return (
+        //Conditionally render roaster or member singup
+        <div>Sign Up</div>
+    )
 }
 
+
+/*
 const [formState, setFormState] = useState([]);
 
 useEffect(()=> {
@@ -40,9 +47,6 @@ const handleSubmit = async (event) => {
     setFormState(initialState)
 }
 
+*/
 
-return (
-    //Conditionally render roaster or member singup
-    <div></div>
-)
 export default SignUp;
