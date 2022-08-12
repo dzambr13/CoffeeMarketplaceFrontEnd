@@ -3,3 +3,13 @@ body {
   padding:0;
   text-align:center;
 }
+.home,.auth,.shop,.user{
+  margin:0;
+  padding:0;
+  height:100vh;
+  width:100vw;
+  background-color: grey;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+

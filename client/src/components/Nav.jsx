@@ -12,9 +12,9 @@ const Nav = ({ authenticated, user, handleLogout }) => {
 
     const publicOptions = (
         <nav>
-        <Link to="/">Home</Link>
-        <Link to="/signup">Sign Up</Link>
-        <Link to="/login">Login</Link>
+            <Link to="/">Home</Link>
+            <Link to="/auth">Sign Up</Link>
+            <Link to="/auth">Login</Link>
         </nav>
     )
 
