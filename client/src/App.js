@@ -1,15 +1,22 @@
 import "./App.css";
-import React, { useState } from "react";
+import react, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import Nav from "./components/Nav";
+import Home from './pages/Home'
+import Shop from './pages/Shop'
+import User from './pages/User'
+import Auth from './pages/Auth'
+import axios from 'axios'
 
 export const App = () => {
   return (
     <div className="App">
-      <Nav />
-      <header></header>
       <main>
-        <Routes>{/* <Route path='/' element={<Home/>} /> */}</Routes>
+        <Routes>
+          <Route path='/' element={<Home/>} /> 
+          <Route path='/shop' element={<Shop/>} /> 
+          <Route path='/user' element={<User/>} /> 
+          <Route path='/auth' element={<Auth/>} /> 
+        </Routes>
       </main>
     </div>
   );
