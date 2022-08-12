@@ -1,11 +1,16 @@
-const Shop=()=>{
+import { Link } from "react-router-dom";
 
+const Shop = () => {
+  return (
+    <div className="shop">
+      <p>SHOP</p>
+      <Link to="/">Home</Link>
 
-    return (
-        <div className='shop'>
-            SHOP 
-        </div>
-    )
-}
+      <Link to="/user">User</Link>
 
-export default Shop 
+      <Link to="/auth">Auth</Link>
+    </div>
+  );
+};
+
+export default Shop;
