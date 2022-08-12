@@ -2,7 +2,7 @@ const User=()=>{
 
 
     return (
-        <div>
+        <div className='user'>
             USER 
         </div>
     )
