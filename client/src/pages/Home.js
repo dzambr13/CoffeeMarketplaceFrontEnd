@@ -10,7 +10,7 @@ const Home=()=>{
             <p> HOME </p> 
             <Link to='/user'> user </Link>
             <Link to='/shop'> shop </Link>
-            <Link to='/auth'> auth </Link>
+            <Link to='/register'> REGISTER PAGE </Link>
 
             <div>
                 <Search/>
