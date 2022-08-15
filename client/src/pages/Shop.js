@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
-import CoffeeCard from "../components/CoffeeCard";
-import CoffeeDetails from "../components/CoffeeDetails";
-import Search from "../components/Search";
+import { Link } from 'react-router-dom'
+import CoffeeCard from '../components/CoffeeCard'
+import CoffeeDetails from '../components/CoffeeDetails'
+import Search from '../components/Search'
+//Test gt cleanup
 
 const Shop = () => {
   return (
@@ -12,12 +13,12 @@ const Shop = () => {
       <Link to="/auth">Auth</Link>
 
       <div>
-        <CoffeeCard/>
-        <CoffeeDetails/>
         <Search />
+        <CoffeeCard />
+        <CoffeeDetails />
       </div>
     </div>
-  );
-};
-
-export default Shop;
+  )
+}
+// this is shop
+export default Shop
