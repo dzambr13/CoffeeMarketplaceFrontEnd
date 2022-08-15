@@ -1,9 +1,5 @@
-
-import {useState} from 'react'
-import {useNavigate,Link} from 'react-router-dom'
-
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 import RegisterAsRoaster from '../components/RegisterAsRoaster'
 import RegisterAsMember from '../components/RegisterAsMember'
@@ -13,43 +9,42 @@ const Register = () => {
   let registration
   let text
 
-  if(registrationType){
-    registration=<RegisterAsMember/>
-    text="Register as a seller"
-  }else{
-    registration=<RegisterAsRoaster/>
-    text="Register as a member"
-
   if (registrationType) {
     registration = <RegisterAsMember />
-    text = 'Register as a member'
+    text = 'Register as a seller'
   } else {
     registration = <RegisterAsRoaster />
-    text = 'Register as a seller'
+    text = 'Register as a member'
 
-  }
+    if (registrationType) {
+      registration = <RegisterAsMember />
+      text = 'Register as a member'
+    } else {
+      registration = <RegisterAsRoaster />
+      text = 'Register as a seller'
+    }
 
-  return (
-    <div>
+    return (
       <div>
-        <h2> Register Page </h2>
-        <button
-          onClick={() => {
-            registrationType
-              ? setRegistrationType(false)
-              : setRegistrationType(true)
-          }}
-        >
-          {text}
-        </button>
+        <div className="RegisterPageCSS">
+          <h2 className="MainRegister"> Register Page </h2>
+          <button
+            onClick={() => {
+              registrationType
+                ? setRegistrationType(false)
+                : setRegistrationType(true)
+            }}
+          >
+            {text}
+          </button>
+        </div>
+
+        <Link to="/"> Go Home </Link>
+
+        <div>{registration}</div>
       </div>
-
-      <Link to='/'> Go Home </Link>
-
-      <div>{registration}</div>
-
-    </div>
-  )
+    )
+  }
 }
 // cleanup
 export default Register
