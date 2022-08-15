@@ -1,3 +1,4 @@
+
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom"
@@ -26,6 +27,17 @@ const CoffeeDetails = (props) => {
             </div>
         </div>
     ) : null;
+
+const CoffeeDetails=()=>{
+
+    return (
+        <div>
+
+            <p> Coffee Details </p>
+
+        </div>
+    )
+
 }
 
 export default CoffeeDetails

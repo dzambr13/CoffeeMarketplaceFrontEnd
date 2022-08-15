@@ -10,5 +10,5 @@ const Shop = () => {
     </div>
   )
 }
-
+// this is shop
 export default Shop

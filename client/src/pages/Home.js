@@ -1,5 +1,7 @@
 import {Link} from 'react-router-dom'
 import {useNavigate} from 'react'
+import Search from '../components/Search'
+import CoffeeCard from '../components/CoffeeCard'
 
 const Home=()=>{
 
@@ -8,7 +10,12 @@ const Home=()=>{
             <p> HOME </p> 
             <Link to='/user'> user </Link>
             <Link to='/shop'> shop </Link>
-            <Link to='/auth'> auth </Link>
+            <Link to='/register'> REGISTER PAGE </Link>
+
+            <div>
+                <Search/>
+                <CoffeeCard/>
+            </div>
         </div>
     )
 }
