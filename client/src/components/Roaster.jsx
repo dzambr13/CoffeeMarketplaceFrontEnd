@@ -1,9 +1,15 @@
-const Roaster=()=>{
+const Roaster=({Roaster, CreateProduct})=>{
 
     return (
-        <div>
+        <div className="roaster-info">
 
-            <p> Roaster </p>
+            <h3>{Roaster.userName}</h3>
+            <p>{Roaster.businessName}</p>
+            <p>{Roaster.location}</p>
+            
+            
+
+            <button onClick={CreateProduct}></button>
 
         </div>
     )

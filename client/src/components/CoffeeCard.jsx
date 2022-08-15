@@ -1,12 +1,18 @@
 
 
-const CoffeeCard=()=>{
+const CoffeeCard=({Product, UpdateProduct, index})=>{
 
     return (
-        <div>
+        <div className="coffee-card">
 
-            <p> Coffee Card </p>
+            <img src={Product.productImageUrl} alt="CoffePicture"/>
+            <h3> {Product.name} </h3>
+            <p>{Product.roasterId}</p>
+            <p> {Product.price} </p>
 
+            //Conditionally render based on user logged in, and if product belongs to them; add confirmation before deleting?
+            <button onClick={()=> UpdateProduct(Product, index)}>Edit product</button>
+            <button onClick={()=> DeleteProduct(Product, index)}>Delete product</button>
         </div>
     )
 }
