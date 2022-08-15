@@ -1,15 +1,29 @@
 body {
-  margin:0;
-  padding:0;
-  text-align:center;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
-.home,.auth,.shop,.user{
-  margin:0;
-  padding:0;
-  height:100vh;
-  width:100vw;
+.home,
+.auth,
+.shop,
+.user {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
   background-color: rgb(235, 235, 235);
   border: 2px solid black;
   border-radius: 15px;
 }
 
+.coffee-details {
+  display: flex;
+  border: 2px solid black;
+  width: 70vw;
+}
+
+.coffee-details > p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
