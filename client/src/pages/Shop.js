@@ -7,6 +7,14 @@ const Shop = () => {
       <Link to="/">Home</Link>
       <Link to="/user">User</Link>
       <Link to="/auth">Auth</Link>
+
+
+      <div>
+        <Search />
+        <CoffeeCard />
+        <CoffeeDetails />
+      </div>
+
     </div>
   )
 }
