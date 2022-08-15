@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Search=()=>{
 
     return (
@@ -9,5 +11,5 @@ const Search=()=>{
         </div>
     )
 }
-
+// add to pull
 export default Search

@@ -1,11 +1,11 @@
-import {Link} from 'react-router-dom'
-import {useNavigate} from 'react'
+import { Link } from 'react-router-dom'
+import { useNavigate } from 'react'
 import Search from '../components/Search'
 import CoffeeCard from '../components/CoffeeCard'
 
-const Home=({user,authenticated})=>{
+const Home = ({ user, authenticated }) => {
+  console.log('User = ', user)
 
-    console.log("User = ",user)
 
     return (
         <div className='home'>
@@ -24,6 +24,7 @@ const Home=({user,authenticated})=>{
             </div>
         </div>
     )
+
 }
 
-export default Home 
+export default Home
