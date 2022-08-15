@@ -1,9 +1,11 @@
-const Member=()=>{
+const Member=({Member})=>{
 
     return (
-        <div>
+        <div className="member-info">
 
-            <p> Member </p>
+            <h3>{Member.userName}</h3>
+            <p>{Member.firstName} {Member.lastName}</p>
+            <p>{Member.location}</p>
 
         </div>
     )

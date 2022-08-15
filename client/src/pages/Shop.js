@@ -1,12 +1,8 @@
-
 import { Link } from "react-router-dom";
 import CoffeeCard from "../components/CoffeeCard";
 import CoffeeDetails from "../components/CoffeeDetails";
 import Search from "../components/Search";
 //Test gt cleanup
-
-import { Link } from 'react-router-dom'
-
 
 const Shop = () => {
   return (
@@ -16,15 +12,13 @@ const Shop = () => {
       <Link to="/user">User</Link>
       <Link to="/auth">Auth</Link>
 
-
       <div>
         <Search />
         <CoffeeCard />
         <CoffeeDetails />
       </div>
-
     </div>
-  )
-}
+  );
+};
 // this is shop
-export default Shop
+export default Shop;
