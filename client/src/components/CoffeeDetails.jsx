@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom"
+import React from 'react';
 
 const BASE_URL = '/api'
 
@@ -16,16 +17,8 @@ const CoffeeDetails = (props) => {
             // not sure if line 15 should contain id instead of how we referred to it in the backend
             setCoffee(data.data)
         }
-        getCoffeeById
+        getCoffeeById()
     }, [])
-
-    return CoffeeDetails ? (
-        <div className="CoffeeDetailsCSS">
-            <div className="CoffeeDetailHeader">
-
-            </div>
-        </div>
-    ) : null;
 
 const CoffeeDetails=()=>{
 
