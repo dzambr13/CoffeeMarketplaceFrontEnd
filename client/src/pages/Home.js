@@ -3,7 +3,9 @@ import {useNavigate} from 'react'
 import Search from '../components/Search'
 import CoffeeCard from '../components/CoffeeCard'
 
-const Home=()=>{
+const Home=({user,authenticated})=>{
+
+    console.log("User = ",user)
 
     return (
         <div className='home'>
