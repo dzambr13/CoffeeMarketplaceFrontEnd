@@ -21,13 +21,19 @@ export const App = () => {
     toggleAuthenticated(true)
   }
 
+  useEffect(()=>{
+    const token=localStorage.getItem('token')
+    if(token){checkToken()}
+  },[])
+
+
   
   return (
     <div className="App">
       {/*<header> <Nav /> </header>*/}
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home user={user} authenticated={authenticated} />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/user" element={<User />} />
           <Route path="/register" element={<Register />} />
