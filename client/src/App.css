@@ -14,9 +14,47 @@ body {
 }
 
 .home{
+  background:#feffff;
   display:grid;
-  grid-template:1fr 1fr 1fr /1fr 1fr 1fr;
+  grid-template: 20px 50px .25fr 2fr 1fr/
+    100px 1fr 100px;
+  border:none;
+  border-radius:0px;
 }
+.home-navigation{
+  grid-area: 2/1/2/4;
+  background: black;
+  display:flex;
+  flex-direction:row-reverse;
+  align-items:center;
+}
+.link{
+  color:white;
+  text-decoration:none;
+  margin:15px;
+  font-family:sans-serif;
+}
+.home-search{
+  grid-area:5/2/5/2;
+}
+.search-bar{
+  width:400px;
+  height:20px;
+  border:2px solid black;
+  border-radius:10px;
+}
+.home-featured{
+  grid-area:4/2/4/2;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.feature{
+  height:200px;
+  width:150px;
+  border:2px solid black;
+}
+
 
 
 
