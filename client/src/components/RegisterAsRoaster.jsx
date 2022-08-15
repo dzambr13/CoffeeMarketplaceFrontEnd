@@ -50,7 +50,7 @@ const RegisterAsRoaster=()=>{
 
     return (
         <div>
-            <p> Register_As_Roaster </p>
+            <p> Registering as Roaster </p>
         <div className="signin col">
         <div className="card-overlay centered">
             <form className="col" onSubmit={handleSubmit}>
@@ -106,7 +106,7 @@ const RegisterAsRoaster=()=>{
                 type="text"
                 placeholder="logoImageUrl"
                 value={formValues.logoImageUrl}
-                required
+                //required
                 />
             </div>
             <div className="input-wrapper">

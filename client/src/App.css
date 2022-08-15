@@ -16,6 +16,16 @@ body {
   border-radius: 15px;
 }
 
+
+.home{
+  display:grid;
+  grid-template:1fr 1fr 1fr /1fr 1fr 1fr;
+}
+
+
+
+
+
 .coffee-details {
   display: flex;
   border: 2px solid black;
@@ -27,3 +37,4 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
