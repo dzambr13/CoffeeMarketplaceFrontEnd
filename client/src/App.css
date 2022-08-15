@@ -13,3 +13,11 @@ body {
   border-radius: 15px;
 }
 
+.home{
+  display:grid;
+  grid-template:1fr 1fr 1fr /1fr 1fr 1fr;
+}
+
+
+
+

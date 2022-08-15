@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate,Link} from 'react-router-dom'
 import RegisterAsRoaster from '../components/RegisterAsRoaster'
 import RegisterAsMember from '../components/RegisterAsMember'
 
@@ -11,10 +11,10 @@ const Register = () => {
   let text
   if(registrationType){
     registration=<RegisterAsMember/>
-    text="Register as a member"
+    text="Register as a seller"
   }else{
     registration=<RegisterAsRoaster/>
-    text="Register as a seller"
+    text="Register as a member"
   }
 
   return (
@@ -26,6 +26,7 @@ const Register = () => {
       <div>
         {registration}
       </div>
+      <Link to='/'> Go Home </Link>
     </div>
 
   )
