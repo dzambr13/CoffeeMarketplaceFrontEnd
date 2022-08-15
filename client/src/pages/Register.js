@@ -6,28 +6,26 @@ import RegisterAsMember from '../components/RegisterAsMember'
 
 const Register = () => {
 
-
-
-
-
+  const [registrationType,setRegistrationType]=useState(false)
+  let registration
+  let text
+  if(registrationType){
+    registration=<RegisterAsMember/>
+    text="Register as a member"
+  }else{
+    registration=<RegisterAsRoaster/>
+    text="Register as a seller"
+  }
 
   return (
     <div>
       <div>
         <h2> Register Page </h2>
+        <button onClick={()=>{registrationType?setRegistrationType(false):setRegistrationType(true)}}>{text}</button>
       </div>
       <div>
-        <RegisterAsMember />
-        <button></button>
+        {registration}
       </div>
-
-
-
-      <div>
-        <RegisterAsRoaster />
-      </div>
-
-
     </div>
 
   )
@@ -35,3 +33,4 @@ const Register = () => {
 }
 
 export default Register
+
