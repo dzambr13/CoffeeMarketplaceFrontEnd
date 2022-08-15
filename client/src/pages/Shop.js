@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import CoffeeCard from "../components/CoffeeCard";
 import CoffeeDetails from "../components/CoffeeDetails";
 import Search from "../components/Search";
-
+//Test gt cleanup
 const Shop = () => {
   return (
     <div className="shop">
