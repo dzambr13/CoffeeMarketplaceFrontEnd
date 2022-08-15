@@ -8,13 +8,11 @@ const Shop = () => {
       <Link to="/user">User</Link>
       <Link to="/auth">Auth</Link>
 
-
       <div>
         <Search />
         <CoffeeCard />
         <CoffeeDetails />
       </div>
-
     </div>
   )
 }

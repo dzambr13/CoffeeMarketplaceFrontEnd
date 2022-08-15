@@ -19,7 +19,7 @@ const CoffeeDetails = (props) => {
         getCoffeeById
     }, [])
 
-    return boba ? (
+    return CoffeeDetails ? (
         <div className="CoffeeDetailsCSS">
             <div className="CoffeeDetailHeader">
 
