@@ -9,6 +9,7 @@ import Nav from "./components/Nav";
 import SignIn from './pages/SignIn'
 import {CheckSession} from "./services/Auth";
 import {useState,useEffect} from 'react'
+import RegisterAsRoaster from "./components/RegisterAsRoaster";
 
 export const App = () => {
 
