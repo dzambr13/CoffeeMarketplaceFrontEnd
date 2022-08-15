@@ -9,6 +9,7 @@ import Nav from "./components/Nav";
 import SignIn from './pages/SignIn'
 import {CheckSession} from "./services/Auth";
 import {useState,useEffect} from 'react'
+import RegisterAsRoaster from "./components/RegisterAsRoaster";
 
 export const App = () => {
 
@@ -36,7 +37,7 @@ export const App = () => {
           <Route path="/" element={<Home user={user} authenticated={authenticated} />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/user" element={<User />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/register" element={<RegisterAsRoaster />} />
           <Route path="/signin" element={<SignIn setUser={setUser} toggleAuthenticated={toggleAuthenticated} />} />
         </Routes>
       </main>

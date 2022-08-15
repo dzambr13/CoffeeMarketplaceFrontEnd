@@ -7,8 +7,12 @@ const Register = () => {
   let navigate=useNavigate()
 
   const [formValues, setFormValues] = useState({
-    userName: '',
+    userName:'',
+    businessName: '',
     email: '',
+    firstName: '',
+    lastName: '',
+    logoImageUrl: '',
     password: '',
     confirmPassword: ''
   })
@@ -21,12 +25,20 @@ const Register = () => {
     e.preventDefault()
     await RegisterUser({
       userName:formValues.userName,
+      businessName:formValues.businessName,
       email:formValues.email,
+      firstName:formValues.firstName,
+      lastName:formValues.lastName,
+      logoImageUrl:formValues.logoImageUrl,
       password:formValues.password
     })
     setFormValues({
       userName:'',
+      businessName:'',
       email:'',
+      firstName:'',
+      lastName:'',
+      logoImageUrl:'',
       password:'',
       confirmPassword:''
     })
@@ -38,7 +50,7 @@ const Register = () => {
       <div className="card-overlay centered">
         <form className="col" onSubmit={handleSubmit}>
           <div className="input-wrapper">
-            <label htmlFor="name">userName</label>
+            <label htmlFor="name">~~user name~~</label>
             <input
               onChange={handleChange}
               name="userName"
@@ -49,7 +61,51 @@ const Register = () => {
             />
           </div>
           <div className="input-wrapper">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="businessName">~~business name~~</label>
+            <input
+              onChange={handleChange}
+              name="businessName"
+              type="text"
+              placeholder="bussinessName"
+              value={formValues.businessName}
+              required
+            />
+          </div>
+          <div className="input-wrapper">
+            <label htmlFor="firstName">~~first name~~</label>
+            <input
+              onChange={handleChange}
+              name="firstName"
+              type="text"
+              placeholder="firstName"
+              value={formValues.firstName}
+              required
+            />
+          </div>
+          <div className="input-wrapper">
+            <label htmlFor="lastName">~~last name~~</label>
+            <input
+              onChange={handleChange}
+              name="lastName"
+              type="text"
+              placeholder="lastName"
+              value={formValues.lastName}
+              required
+            />
+          </div>
+          <div className="input-wrapper">
+            <label htmlFor="logoImageUrl">~~icon~~</label>
+            <input
+              onChange={handleChange}
+              name="logoImageUrl"
+              type="text"
+              placeholder="logoImageUrl"
+              value={formValues.logoImageUrl}
+              required
+            />
+          </div>
+          <div className="input-wrapper">
+            <label htmlFor="email">~~email~~</label>
             <input
               onChange={handleChange}
               name="email"
@@ -87,7 +143,7 @@ const Register = () => {
                 formValues.confirmPassword === formValues.password)
             }
           >
-            REGISTER NEW USER
+            register new user
           </button>
         </form>
       </div>
