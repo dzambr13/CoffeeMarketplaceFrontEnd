@@ -12,7 +12,8 @@ const Home=({user,authenticated})=>{
             <p> HOME </p> 
             <Link to='/user'> user </Link>
             <Link to='/shop'> shop </Link>
-            <Link to='/register'> REGISTER PAGE </Link>
+            <Link to='/register'> ~~REGISTER PAGE~~ </Link>
+            <Link to='/signin'> ~~SIGN IN~~  </Link>
 
             <div>
                 <Search/>

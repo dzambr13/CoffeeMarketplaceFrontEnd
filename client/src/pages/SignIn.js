@@ -12,6 +12,7 @@ const SignIn = ({toggleAuthenticated, setUser}) => {
   }
   const handleSubmit = async (e) => {
     e.preventDefault()
+    console.log(formValues)
     const payload=await SignInUser(formValues)
     setFormValues({
       email:'',
