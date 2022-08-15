@@ -12,9 +12,6 @@ import { CheckSession } from './services/Auth'
 import { useState, useEffect } from 'react'
 import React from 'react'
 
-import { CheckSession } from './services/Auth'
-import { useState, useEffect } from 'react'
-import RegisterAsRoaster from './components/RegisterAsRoaster'
 
 export const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)

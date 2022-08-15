@@ -14,10 +14,12 @@ const Home = ({ user, authenticated }) => {
                 <Link className='link' to='/signin'>sign in</Link>
                 <Link className='link' to='/shop'>browse</Link>
             </div>
-            <div className='home-featured'>
-                <div className='feature'>1</div>
-                <div className='feature'>2</div>
-                <div className='feature'>3</div>
+            <div className='home-featured-container'>
+                <div className='home-featured'>
+                    <div className='feature'></div>
+                    <div className='feature'></div>
+                    <div className='feature'></div>
+                </div>
             </div>
             <div className='home-search'>
                 <Search className='home-search-bar' />
