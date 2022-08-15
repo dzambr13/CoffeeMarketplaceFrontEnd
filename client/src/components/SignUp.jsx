@@ -15,7 +15,21 @@ const SignUp = () => {
 
     return (
         //Conditionally render roaster or member singup
-        <div>Sign Up</div>
+        <div>Sign Up<br/>
+        <form>
+            <input type="radio" id="member-select" value="member"></input>
+            <label for="member-select">Sign up as member</label><br/>
+            <input type="radio" id="roaster-select" value="Sign up as roaster"></input>
+            <label for="member-select">Sign up as roaster</label><br/>
+            <input type="text" placeholder="Username"></input><br/>
+            <input type="text" placeholder="email address"></input><br/>
+            <input type="text" placeholder="Password"></input><br/>
+            <input type="text" placeholder="Confirm Password"></input><br/>
+            <input type="Submit" value="Sign up"></input><br/>
+            
+        </form>
+            
+        </div>
     )
 }
 

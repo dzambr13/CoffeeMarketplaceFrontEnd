@@ -12,9 +12,9 @@ const Shop = () => {
       <Link to="/auth">Auth</Link>
 
       <div>
-        <CoffeeCard/>
-        <CoffeeDetails/>
         <Search />
+        <CoffeeCard />
+        <CoffeeDetails />
       </div>
     </div>
   );
