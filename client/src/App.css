@@ -1,28 +1,88 @@
 body {
+  background-image: url(https://miro.medium.com/max/1400/1*TUj-YLDXBP1Kiiwadww02Q.gif);
+  background-size: cover;
+  background-repeat:no-repeat;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: x-large;
+  margin-top: 5vh;
+}
+
+.RoasterName {
+  color: white;
+}
+
+.MainRegister {
+  color: white;
+}
+
+.RegisterPageCSS {
+  padding: 2vh;
+  font-size: x-large;
+}
+
+.RegisterMember {
+  color: white;
+}
+
+body {
   margin: 0;
   padding: 0;
   text-align: center;
 }
 .home,
 .auth,
-.shop,
+.shop {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  gap: 8vw;
+  text-decoration: none;
+  color: white;
+}
+
+.shop-links {
+  display: flex;
+  gap: 8vh;
+  text-decoration: none;
+
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
 .user {
+  display:flex;
+  /* grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr; */
+  justify-content: center;
+  justify-items: center;
+  flex-direction: row;
+  gap: 8vw;
   margin: 0;
-  padding: 0;
+  padding: 5vh;
   height: 100vh;
   width: 100vw;
-  background-color: rgb(235, 235, 235);
-  border: 2px solid black;
-  border-radius: 15px;
+  /* background-color: rgb(235, 235, 235); */
+  /* border: 2px solid black;
+  border-radius: 15px; */
+  background-image: url(https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/941942/retina_1708x683_image_0_-_2020-08-20T233648.747-f5720b4826981fac7455031e0c21a3fe.png);
+  background-size: cover;
+  background-repeat:no-repeat;
+  color: white;
 }
 
 
 .home{
   display:grid;
-  grid-template:1fr 1fr 1fr /1fr 1fr 1fr;
+  grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
 }
-
-
 
 
 

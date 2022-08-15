@@ -12,7 +12,7 @@ const Shop = () => {
       <Link to="/user">User</Link>
       <Link to="/auth">Auth</Link>
 
-      <div>
+      <div className="shop-links">
         <Search />
         <CoffeeCard />
         <CoffeeDetails />
