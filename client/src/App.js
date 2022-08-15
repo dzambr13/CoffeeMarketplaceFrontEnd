@@ -37,7 +37,7 @@ export const App = () => {
           <Route path="/" element={<Home user={user} authenticated={authenticated} />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/user" element={<User />} />
-          <Route path="/register" element={<RegisterAsRoaster />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/signin" element={<SignIn setUser={setUser} toggleAuthenticated={toggleAuthenticated} />} />
         </Routes>
       </main>

@@ -2,17 +2,15 @@ import {useState} from 'react'
 import {RegisterUser} from '../services/Auth'
 import {useNavigate} from 'react-router-dom'
 
-const RegisterAsRoaster=()=>{
+const RegisterAsMember=()=>{
 
     let navigate=useNavigate()
 
     const [formValues, setFormValues] = useState({
       userName:'',
-      businessName: '',
       email: '',
       firstName: '',
       lastName: '',
-      logoImageUrl: '',
       password: '',
       confirmPassword: ''
     })
@@ -25,32 +23,25 @@ const RegisterAsRoaster=()=>{
       e.preventDefault()
       await RegisterUser({
         userName:formValues.userName,
-        businessName:formValues.businessName,
         email:formValues.email,
         firstName:formValues.firstName,
         lastName:formValues.lastName,
-        logoImageUrl:formValues.logoImageUrl,
         password:formValues.password
       })
       setFormValues({
         userName:'',
-        businessName:'',
         email:'',
         firstName:'',
         lastName:'',
-        logoImageUrl:'',
         password:'',
         confirmPassword:''
       })
       navigate('/signin')
     }   
 
-
-
-
     return (
         <div>
-            <p> Register_As_Roaster </p>
+            <p> Register_As_Member </p>
         <div className="signin col">
         <div className="card-overlay centered">
             <form className="col" onSubmit={handleSubmit}>
@@ -62,17 +53,6 @@ const RegisterAsRoaster=()=>{
                 type="text"
                 placeholder="John Smith"
                 value={formValues.userName}
-                required
-                />
-            </div>
-            <div className="input-wrapper">
-                <label htmlFor="businessName">~~business name~~</label>
-                <input
-                onChange={handleChange}
-                name="businessName"
-                type="text"
-                placeholder="bussinessName"
-                value={formValues.businessName}
                 required
                 />
             </div>
@@ -95,17 +75,6 @@ const RegisterAsRoaster=()=>{
                 type="text"
                 placeholder="lastName"
                 value={formValues.lastName}
-                required
-                />
-            </div>
-            <div className="input-wrapper">
-                <label htmlFor="logoImageUrl">~~icon~~</label>
-                <input
-                onChange={handleChange}
-                name="logoImageUrl"
-                type="text"
-                placeholder="logoImageUrl"
-                value={formValues.logoImageUrl}
                 required
                 />
             </div>
@@ -148,7 +117,7 @@ const RegisterAsRoaster=()=>{
                     formValues.confirmPassword === formValues.password)
                 }
             >
-                register new ROASTER
+                register new MEMBER
             </button>
             </form>
         </div>
@@ -157,4 +126,4 @@ const RegisterAsRoaster=()=>{
     )
 }
 
-export default RegisterAsRoaster
+export default RegisterAsMember
