@@ -9,8 +9,11 @@ import SignIn from './pages/SignIn'
 import Member from './components/Member'
 
 import { CheckSession } from './services/Auth'
-import { useState, useEffect } from 'react'
 import React from 'react'
+
+
+import { useState, useEffect } from 'react'
+import RegisterAsRoaster from './components/RegisterAsRoaster'
 
 
 export const App = () => {

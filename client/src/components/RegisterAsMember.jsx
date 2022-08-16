@@ -41,7 +41,7 @@ const RegisterAsMember=()=>{
 
     return (
         <div>
-            <p> Registering as Member </p>
+            <p className="RegisterMember"> Registering as Member </p>
         <div className="signin col">
         <div className="card-overlay centered">
             <form className="col" onSubmit={handleSubmit}>

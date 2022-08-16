@@ -49,7 +49,7 @@ const RegisterAsRoaster=()=>{
 
 
     return (
-        <div>
+        <div className="RoasterName">
             <p> Registering as Roaster </p>
         <div className="signin col">
         <div className="card-overlay centered">

@@ -1,7 +1,14 @@
+
+import { Link } from "react-router-dom";
+import CoffeeCard from "../components/CoffeeCard";
+import CoffeeDetails from "../components/CoffeeDetails";
+import Search from "../components/Search";
+
 import { Link } from 'react-router-dom'
 import CoffeeCard from '../components/CoffeeCard'
 import CoffeeDetails from '../components/CoffeeDetails'
 import Search from '../components/Search'
+
 //Test gt cleanup
 
 const Shop = () => {
@@ -12,13 +19,17 @@ const Shop = () => {
       <Link to="/user">User</Link>
       <Link to="/auth">Auth</Link>
 
+
       <div>
+
+      <div className="shop-links">
+
         <Search />
         <CoffeeCard />
         <CoffeeDetails />
       </div>
     </div>
-  )
-}
+  );
+};
 // this is shop
-export default Shop
+export default Shop;
