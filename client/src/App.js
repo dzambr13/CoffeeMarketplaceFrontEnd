@@ -1,36 +1,36 @@
-import "./App.css";
-import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Shop from "./pages/Shop";
-import User from "./pages/User";
-import Register from "./pages/Register";
-import axios from "axios";
-import SignIn from "./pages/SignIn";
-import Member from "./components/Member";
+import './App.css'
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Shop from './pages/Shop'
+import User from './pages/User'
+import Register from './pages/Register'
+import axios from 'axios'
+import SignIn from './pages/SignIn'
+import Member from './components/Member'
 
-import { CheckSession } from "./services/Auth";
-import React from "react";
+import { CheckSession } from './services/Auth'
+import React from 'react'
 
-import { useState, useEffect } from "react";
-import RegisterAsRoaster from "./components/RegisterAsRoaster";
-import AddNewProduct from "./pages/AddProduct";
+import { useState, useEffect } from 'react'
+import RegisterAsRoaster from './components/RegisterAsRoaster'
+import AddNewProduct from './pages/AddProduct'
 
 export const App = () => {
-  const [authenticated, toggleAuthenticated] = useState(false);
-  const [user, setUser] = useState(null);
+  const [authenticated, toggleAuthenticated] = useState(false)
+  const [user, setUser] = useState(null)
 
   const checkToken = async () => {
-    const user = await CheckSession();
-    setUser(user);
-    toggleAuthenticated(true);
-  };
+    const user = await CheckSession()
+    setUser(user)
+    toggleAuthenticated(true)
+  }
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem('token')
     if (token) {
-      checkToken();
+      checkToken()
     }
-  }, []);
+  }, [])
 
   return (
     <div className="App">
@@ -56,7 +56,9 @@ export const App = () => {
         </Routes>
       </main>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
+
+// resolving conflicts
