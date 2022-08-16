@@ -1,27 +1,42 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 // import Client from "./api";
-import Roaster from "../components/Roaster";
+import Roaster from '../components/Roaster'
+import axios from 'axios'
+const BASE_URL = '/api'
 
 const AddNewProduct = () => {
-  let navigate = useNavigate();
+  let navigate = useNavigate()
 
   const [formValues, setFormValues] = useState({
-    name: "",
-    units: "",
-    quantity: "",
-    texture: "",
-    productImageUrl: "",
-    price: "",
-    description: "",
-  });
+    name: '',
+    units: '',
+    quantity: '',
+    texture: '',
+    productImageUrl: '',
+    price: '',
+    description: ''
+  })
+
+  const [product, setProduct] = useState('')
+  let { pd } = useParams()
+  // console.log('testing use effect')
+
+  useEffect(() => {
+    const getProductById = async () => {
+      let data = await axios.get(`${BASE_URL}/product/${pd}`)
+      setProduct(data.data)
+    }
+    getProductById()
+  }, [])
 
   const handleChange = (e) => {
-    setFormValues({ ...formValues, [e.target.name]: e.target.value });
-  };
+    setFormValues({ ...formValues, [e.target.name]: e.target.value })
+  }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     await AddNewProduct({
       name: formValues.name,
       units: formValues.units,
@@ -29,8 +44,8 @@ const AddNewProduct = () => {
       texture: formValues.texture,
       productImageUrl: formValues.productImageUrl,
       price: formValues.price,
-      description: formValues.description,
-    });
+      description: formValues.description
+    })
 
     return (
       <form className="col" onSubmit={handleSubmit}>
@@ -106,7 +121,7 @@ const AddNewProduct = () => {
           />
         </div>
       </form>
-    );
-  };
-};
-export default AddNewProduct;
+    )
+  }
+}
+export default AddNewProduct
