@@ -1,10 +1,4 @@
-
 const Member=({Member})=>{
-
-import React from 'react';
-
-const Member=()=>{
-
 
     return (
         <div className="member-info">
