@@ -14,7 +14,7 @@ const Shop = () => {
 
       <div>
         <Search />
-        <CoffeeCard />
+        {/* <CoffeeCard /> */}
         <CoffeeDetails />
       </div>
     </div>
