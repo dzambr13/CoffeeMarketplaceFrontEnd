@@ -10,7 +10,7 @@ const Shop = () => {
         <Link className="shop-links" to="/register">
           create an account
         </Link>
-        <Link className="shop-links" to="/login">
+        <Link className="shop-links" to="/signin">
           sign in
         </Link>
         <Link className="shop-links" to="/user">
