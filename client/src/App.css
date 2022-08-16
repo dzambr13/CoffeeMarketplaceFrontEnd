@@ -1,5 +1,5 @@
 body {
-  background-image: url(https://miro.medium.com/max/1400/1*TUj-YLDXBP1Kiiwadww02Q.gif);
+  /* background-image: url(https://miro.medium.com/max/1400/1*TUj-YLDXBP1Kiiwadww02Q.gif); */
   background-size: cover;
   background-repeat:no-repeat;
 }
@@ -8,17 +8,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  /* color: white; */
   font-size: x-large;
   margin-top: 5vh;
 }
 
 .RoasterName {
-  color: white;
+  /* color: white; */
 }
 
 .MainRegister {
-  color: white;
+  /* color: white; */
 }
 
 .RegisterPageCSS {
@@ -27,7 +27,7 @@ body {
 }
 
 .RegisterMember {
-  color: white;
+  /* color: white; */
 }
 
 body {
@@ -42,8 +42,11 @@ body {
   align-items:center;
   justify-content: center;
   gap: 8vw;
-  text-decoration: none;
-  color: white;
+  /* text-decoration: none; */
+  /* color: white; */
+  /* background-image: url(https://miro.medium.com/max/1400/1*TUj-YLDXBP1Kiiwadww02Q.gif); */
+  background-size: cover;
+  background-repeat:no-repeat;
 }
 
 .shop-links {
@@ -55,7 +58,7 @@ body {
 
 a {
   text-decoration: none;
-  color: white;
+  /* color: white; */
 }
 
 .user {
@@ -85,9 +88,12 @@ a {
     100px 1fr 100px;
   border:none;
   border-radius:0px;
+  background-image: url(https://miro.medium.com/max/1400/1*TUj-YLDXBP1Kiiwadww02Q.gif);
+  background-size: cover;
+  background-repeat:no-repeat;
 }
 .home-navigation{
-  grid-area: 2/1/2/4;
+  grid-area: 1/1/1/4;
   background: black;
   display:flex;
   flex-direction:row-reverse;
