@@ -1,8 +1,7 @@
-import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
-
-import RegisterAsRoaster from "../components/RegisterAsRoaster";
-import RegisterAsMember from "../components/RegisterAsMember";
+import {useState} from 'react'
+import {useNavigate,Link} from 'react-router-dom'
+import RegisterAsRoaster from '../components/RegisterAsRoaster'
+import RegisterAsMember from '../components/RegisterAsMember'
 
 const Register = () => {
   const [registrationType, setRegistrationType] = useState(false);
@@ -31,15 +30,10 @@ const Register = () => {
           {text}
         </button>
       </div>
-
-      <Link to="/"> Go Home </Link>
-
-      <Link to="/"> Go Home </Link>
-
+      <Link to='/'> Go Home </Link>
       <div>{registration}</div>
     </div>
-  );
-};
+  )
+}
 
-// cleanup
 export default Register;
