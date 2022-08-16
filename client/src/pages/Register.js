@@ -21,12 +21,9 @@ const Register = () => {
       <div className="RegisterPageCSS">
         <h2 className="MainRegister"> Register Page </h2>
         <button
-          onClick={() => {
-            registrationType
-              ? setRegistrationType(false)
-              : setRegistrationType(true);
-          }}
-        >
+          onClick={()=>{
+            registrationType? setRegistrationType(false):setRegistrationType(true)
+          }}>
           {text}
         </button>
       </div>
