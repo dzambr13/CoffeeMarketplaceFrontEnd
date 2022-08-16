@@ -228,3 +228,30 @@ a {
   margin:25px;
   font-family:sans-serif;
 }
+.registration-page{
+  height:100vh;
+  width:100vw;
+  display:grid;
+  grid-template:50px 1fr / 1fr;
+}
+.registration-nav{
+  grid-area:1/1/1/1;
+  background:black;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+}
+.registration-links{
+  color:white;
+  margin:25px
+}
+.registration-container{
+  border:2px solid black;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+.input-wrapper{
+  font-size:15px;
+  font-family:sans-serif;
+}
