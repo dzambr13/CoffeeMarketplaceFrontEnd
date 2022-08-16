@@ -5,14 +5,16 @@ import Shop from './pages/Shop'
 import User from './pages/User'
 import Register from './pages/Register'
 import axios from 'axios'
-import Nav from './components/Nav'
 import SignIn from './pages/SignIn'
+import Member from './components/Member'
 
 import { CheckSession } from './services/Auth'
 import React from 'react'
 
+
 import { useState, useEffect } from 'react'
 import RegisterAsRoaster from './components/RegisterAsRoaster'
+
 
 export const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -40,16 +42,9 @@ export const App = () => {
           <Route path="/shop" element={<Shop />} />
           <Route path="/user" element={<User />} />
           <Route path="/register" element={<Register />} />
-          <Route
-            path="/signin"
-            element={
-              <SignIn
-                setUser={setUser}
-                toggleAuthenticated={toggleAuthenticated}
-              />
-            }
-          />
-        </Routes>
+          <Route path="/signin" element={<SignIn user={user} setUser={setUser} toggleAuthenticated={toggleAuthenticated}/>}/>
+          <Route path='/profile' element={<Member user={user} />} />
+        </Routes> 
       </main>
     </div>
   )
