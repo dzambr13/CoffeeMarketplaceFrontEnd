@@ -88,7 +88,7 @@ a {
   border-radius: 0px;
 }
 .home-navigation {
-  grid-area: 2/1/2/4;
+  grid-area: 1/1/1/4;
   background: black;
   display: flex;
   flex-direction: row-reverse;
