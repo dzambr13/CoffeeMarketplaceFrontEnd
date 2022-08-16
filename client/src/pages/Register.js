@@ -1,5 +1,11 @@
+
+
+import {useState} from 'react'
+import {useNavigate,Link} from 'react-router-dom'
+
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
+
 
 import RegisterAsRoaster from '../components/RegisterAsRoaster'
 import RegisterAsMember from '../components/RegisterAsMember'
@@ -9,12 +15,21 @@ const Register = () => {
   let registration
   let text
 
+
+  if(registrationType){
+    registration=<RegisterAsMember/>
+    text="Register as a seller"
+  }else{
+    registration=<RegisterAsRoaster/>
+    text="Register as a member"
+
   if (registrationType) {
     registration = <RegisterAsMember />
     text = 'Register as a member'
   } else {
     registration = <RegisterAsRoaster />
     text = 'Register as a seller'
+
   }
 
   return (
@@ -32,7 +47,11 @@ const Register = () => {
         </button>
       </div>
 
+      <Link to='/'> Go Home </Link>
+
+
       <Link to="/"> Go Home </Link>
+
 
       <div>{registration}</div>
     </div>
