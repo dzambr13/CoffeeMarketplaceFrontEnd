@@ -1,9 +1,16 @@
-import {Link} from 'react-router-dom'
 
+import {Link} from 'react-router-dom'
 import React from 'react';
 
 
 const Member=({user})=>{
+
+    // return (
+    //     <div className="member-info">
+
+    console.log(user)
+
+
 
     // return (
     //     <div className="member-info">

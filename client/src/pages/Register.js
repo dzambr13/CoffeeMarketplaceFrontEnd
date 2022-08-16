@@ -11,42 +11,34 @@ const Register = () => {
 
   if (registrationType) {
     registration = <RegisterAsMember />
-    text = 'Register as a seller'
+    text = 'Register as a member'
   } else {
     registration = <RegisterAsRoaster />
-    text = 'Register as a member'
-
-    if (registrationType) {
-      registration = <RegisterAsMember />
-      text = 'Register as a member'
-    } else {
-      registration = <RegisterAsRoaster />
-      text = 'Register as a seller'
-    }
-
-    return (
-      <div>
-        <div className="RegisterPageCSS">
-          <h2 className="MainRegister"> Register Page </h2>
-          <button
-            onClick={() => {
-              registrationType
-                ? setRegistrationType(false)
-                : setRegistrationType(true)
-            }}
-          >
-            {text}
-          </button>
-        </div>
-
-        <Link to="/"> Go Home </Link>
-
-        <Link to="/"> Go Home </Link>
-
-        <div>{registration}</div>
-      </div>
-    )
+    text = 'Register as a seller'
   }
+
+  return (
+    <div>
+      <div className="RegisterPageCSS">
+        <h2 className="MainRegister"> Register Page </h2>
+        <button
+          onClick={() => {
+            registrationType
+              ? setRegistrationType(false)
+              : setRegistrationType(true)
+          }}
+        >
+          {text}
+        </button>
+      </div>
+
+      <Link to="/"> Go Home </Link>
+
+      <Link to="/"> Go Home </Link>
+
+      <div>{registration}</div>
+    </div>
+  )
 }
 
 // cleanup
