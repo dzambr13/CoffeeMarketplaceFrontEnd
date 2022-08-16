@@ -1,4 +1,8 @@
 
+const Member=({Member})=>{
+
+
+
 import {Link} from 'react-router-dom'
 
 
@@ -11,6 +15,7 @@ const Member=({user})=>{
 
 
     console.log(user)
+
 
 
     return (

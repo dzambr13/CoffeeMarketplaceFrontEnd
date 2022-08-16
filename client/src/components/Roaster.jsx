@@ -1,4 +1,4 @@
-const Roaster=({Roaster, CreateProduct})=>{
+const Roaster=({Roaster, CreateProduct, updateRoaster})=>{
 
     return (
         <div className="roaster-info">
@@ -8,8 +8,8 @@ const Roaster=({Roaster, CreateProduct})=>{
             <p>{Roaster.location}</p>
             
             
-
-            <button onClick={CreateProduct}></button>
+            <button onClick={updateRoaster}>Edit profile</button>
+            <button onClick={CreateProduct}>Add new product</button>
 
         </div>
     )
