@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Client from "./api";
+// import Client from "./api";
 import Roaster from "../components/Roaster";
 
 const AddNewProduct = () => {
@@ -22,7 +22,7 @@ const AddNewProduct = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await RegisterUser({
+    await AddNewProduct({
       name: formValues.name,
       units: formValues.units,
       quantity: formValues.quantity,
@@ -35,7 +35,7 @@ const AddNewProduct = () => {
     return (
       <form className="col" onSubmit={handleSubmit}>
         <div className="input-wrapper">
-          <label htmlFor="firstName">~~first name~~</label>
+          {/* <label htmlFor="name">~~name~~</label> */}
           <input
             onChange={handleChange}
             name="name"
@@ -46,7 +46,6 @@ const AddNewProduct = () => {
           />
         </div>
         <div className="input-wrapper">
-          <label htmlFor="firstName">~~first name~~</label>
           <input
             onChange={handleChange}
             name="units"
@@ -57,7 +56,6 @@ const AddNewProduct = () => {
           />
         </div>
         <div className="input-wrapper">
-          <label htmlFor="firstName">~~first name~~</label>
           <input
             onChange={handleChange}
             name="quantity"
@@ -68,7 +66,6 @@ const AddNewProduct = () => {
           />
         </div>
         <div className="input-wrapper">
-          <label htmlFor="firstName">~~first name~~</label>
           <input
             onChange={handleChange}
             name="texture"
@@ -79,7 +76,6 @@ const AddNewProduct = () => {
           />
         </div>
         <div className="input-wrapper">
-          <label htmlFor="firstName">~~first name~~</label>
           <input
             onChange={handleChange}
             name="productImageUrl"
@@ -90,7 +86,6 @@ const AddNewProduct = () => {
           />
         </div>
         <div className="input-wrapper">
-          <label htmlFor="firstName">~~first name~~</label>
           <input
             onChange={handleChange}
             name="price"
@@ -101,7 +96,6 @@ const AddNewProduct = () => {
           />
         </div>
         <div className="input-wrapper">
-          <label htmlFor="firstName">~~first name~~</label>
           <input
             onChange={handleChange}
             name="description"
