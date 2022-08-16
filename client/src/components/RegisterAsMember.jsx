@@ -41,12 +41,11 @@ const RegisterAsMember=()=>{
 
     return (
         <div>
-            <p className="RegisterMember"> Registering as Member </p>
-        <div className="signin col">
+
         <div className="card-overlay centered">
             <form className="col" onSubmit={handleSubmit}>
             <div className="input-wrapper">
-                <label htmlFor="name">~~user name~~</label>
+                <label htmlFor="name">user name</label>
                 <input
                 onChange={handleChange}
                 name="userName"
@@ -57,7 +56,7 @@ const RegisterAsMember=()=>{
                 />
             </div>
             <div className="input-wrapper">
-                <label htmlFor="firstName">~~first name~~</label>
+                <label htmlFor="firstName">first name</label>
                 <input
                 onChange={handleChange}
                 name="firstName"
@@ -68,7 +67,7 @@ const RegisterAsMember=()=>{
                 />
             </div>
             <div className="input-wrapper">
-                <label htmlFor="lastName">~~last name~~</label>
+                <label htmlFor="lastName">last name</label>
                 <input
                 onChange={handleChange}
                 name="lastName"
@@ -79,7 +78,7 @@ const RegisterAsMember=()=>{
                 />
             </div>
             <div className="input-wrapper">
-                <label htmlFor="email">~~email~~</label>
+                <label htmlFor="email">email</label>
                 <input
                 onChange={handleChange}
                 name="email"
@@ -91,7 +90,7 @@ const RegisterAsMember=()=>{
             </div>
 
             <div className="input-wrapper">
-                <label htmlFor="password">Password</label>
+                <label htmlFor="password">password</label>
                 <input
                 onChange={handleChange}
                 type="password"
@@ -101,7 +100,7 @@ const RegisterAsMember=()=>{
                 />
             </div>
             <div className="input-wrapper">
-                <label htmlFor="confirmPassword">Confirm Password</label>
+                <label htmlFor="confirmPassword">confirm password</label>
                 <input
                 onChange={handleChange}
                 type="password"
@@ -110,7 +109,7 @@ const RegisterAsMember=()=>{
                 required
                 />
             </div>
-            <button
+            <button className='complete-reg'
                 disabled={
                 !formValues.email ||
                 (!formValues.password &&
@@ -122,7 +121,7 @@ const RegisterAsMember=()=>{
             </form>
         </div>
     </div>
-    </div>
+
     )
 }
 

@@ -246,12 +246,42 @@ a {
   margin:25px
 }
 .registration-container{
-  border:2px solid black;
   display:flex;
   justify-content:space-around;
   align-items:center;
+  border:1px solid black;
+  flex-direction:column;
 }
 .input-wrapper{
   font-size:15px;
   font-family:sans-serif;
+  margin:5px;
+  display:flex;
+  justify-content: space-between;
 }
+.col{
+  margin:15px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:space-between;
+  height:400px;
+  padding:20px;
+  width:350px;
+}
+.complete-reg{
+  margin-top:15px;
+  background:transparent;
+  border-radius: 15px;
+}
+.switch-reg-type{
+  margin-top:-300px;
+  background:transparent;
+  border:none;
+}
+.switch-reg-type:hover{
+  background:black;
+  color:white;
+}
+
+

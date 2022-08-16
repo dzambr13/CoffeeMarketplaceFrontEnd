@@ -8,12 +8,12 @@ const Register = () => {
   let registration
   let text
 
-  if (registrationType) {
+  if (!registrationType) {
     registration = <RegisterAsMember />
-    text = 'Register as a member'
+    text = 'create a seller account'
   } else {
     registration = <RegisterAsRoaster />
-    text = 'Register as a seller'
+    text = 'create a buyer account'
   }
 
   return (
@@ -24,10 +24,11 @@ const Register = () => {
       </div>
       <div className='registration-container'>
         {registration}
-      </div>
-        <button
+        <button className='switch-reg-type'
           onClick={()=>{registrationType? setRegistrationType(false):setRegistrationType(true)}}>{text}
         </button>
+      </div>
+        
       
     </div>
   )
