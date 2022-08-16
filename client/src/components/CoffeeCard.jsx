@@ -1,6 +1,4 @@
-
-
-const CoffeeCard=({Product, UpdateProduct, index})=>{
+const CoffeeCard=({Product, UpdateProduct,DeleteProduct, index})=>{
 
     return (
         <div className="coffee-card">

@@ -2,7 +2,7 @@ body {
   background-image: url(https://miro.medium.com/max/1400/1*TUj-YLDXBP1Kiiwadww02Q.gif);
   background-size: cover;
   background-repeat:no-repeat;
-}
+} 
 
 .input-wrapper {
   display: flex;
@@ -36,14 +36,14 @@ body {
   text-align: center;
 }
 .home,
-.auth,
-.shop {
+.auth
+ {
   display: flex;
   align-items:center;
   justify-content: center;
   gap: 8vw;
   text-decoration: none;
-  color: white;
+  /* color: white; */
 }
 
 .shop-links {
@@ -207,4 +207,9 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.shop{
+  height:100vh;
+  width:100vw;
+  background:grey;
 }
