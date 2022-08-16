@@ -17,19 +17,18 @@ const Register = () => {
   }
 
   return (
-    <div>
-      <div className="RegisterPageCSS">
-        <h2 className="MainRegister"> Register Page </h2>
-        <button
-          onClick={()=>{
-            registrationType? setRegistrationType(false):setRegistrationType(true)
-          }}>
-
-          {text}
-        </button>
+    <div className='registration-page'>
+      <div className='registration-nav'>
+        <Link className='registration-links' to="/">home</Link>
+        <Link className='registration-links' to="/shop">browse</Link>
       </div>
-      <Link to="/"> Go Home </Link>
-      <div>{registration}</div>
+      <div className='registration-container'>
+        {registration}
+      </div>
+        <button
+          onClick={()=>{registrationType? setRegistrationType(false):setRegistrationType(true)}}>{text}
+        </button>
+      
     </div>
   )
 }
