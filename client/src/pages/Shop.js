@@ -21,8 +21,8 @@ const Shop = () => {
         </Link>
       </div>
 
-      <div>
-        {/* <Search /> */}
+      <div className="ShopSearch">
+        <Search />
         {/* <CoffeeCard /> */}
         <CoffeeDetails />
       </div>
