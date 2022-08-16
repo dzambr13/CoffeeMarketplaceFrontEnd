@@ -47,7 +47,6 @@ const RegisterAsRoaster=()=>{
 
     return (
         <div className="RoasterName">
-            <div className="signin col">
                 <div className="card-overlay centered">
                     <form className="col" onSubmit={handleSubmit}>
                     <div className="input-wrapper">
@@ -136,7 +135,7 @@ const RegisterAsRoaster=()=>{
                         required
                         />
                     </div>
-                    <button
+                    <button className='complete-reg'
                         disabled={
                         !formValues.email ||
                         (!formValues.password &&
@@ -148,7 +147,6 @@ const RegisterAsRoaster=()=>{
                     </form>
                 </div>
             </div>
-        </div>
     )
 }
 
