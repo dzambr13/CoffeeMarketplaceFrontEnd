@@ -1,13 +1,5 @@
 
-const Member=({Member})=>{
-
-
-
 import {Link} from 'react-router-dom'
-
-
-const Member=({Member})=>{
-
 import React from 'react';
 
 
@@ -18,12 +10,12 @@ const Member=({user})=>{
 
 
 
-    return (
-        <div className="member-info">
+    // return (
+    //     <div className="member-info">
 
-            <h3>{Member.userName}</h3>
-            <p>{Member.firstName} {Member.lastName}</p>
-            <p>{Member.location}</p>
+    //         <h3>{Member.userName}</h3>
+    //         <p>{Member.firstName} {Member.lastName}</p>
+    //         <p>{Member.location}</p>
 
     return (
         <div className="profile-page">
