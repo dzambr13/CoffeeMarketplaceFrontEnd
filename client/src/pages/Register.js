@@ -34,8 +34,6 @@ const Register = () => {
 
       <Link to="/"> Go Home </Link>
 
-      <Link to="/"> Go Home </Link>
-
       <div>{registration}</div>
     </div>
   )
