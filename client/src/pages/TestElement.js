@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import Client from "../services/api";
 
-const TestElement = () => {
+const TestElement = ({ user }) => {
   const [formValues, setFormValues] = useState({
     name: "",
     units: "",
@@ -27,6 +27,7 @@ const TestElement = () => {
       productImageUrl: formValues.productImageUrl,
       price: formValues.price,
       description: formValues.description,
+      roasterId: user.id,
     });
     console.log(res.data);
   };

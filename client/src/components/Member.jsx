@@ -8,8 +8,24 @@ import TestElement from '../pages/TestElement'
 
 
 const Member=({user})=>{
-    console.log(user)
-    console.log(AddNewProduct)
+    
+    let [sellerProducts, setSellerProducts] = useState([]);
+    
+    useEffect(() => {
+        const GetSellerProducts = async () => {
+        let res = await axios("http://localhost:3001/api/products")
+        let AllProducts = res.data
+        let sp = []
+        AllProducts.map((product)=>{
+            product.roasterId === user.id? sp.push(product):console.log("Not user's product")
+        })
+            
+        setSellerProducts(sp);
+        };
+        GetSellerProducts();
+    }, []);
+    console.log(sellerProducts);
+    
 
 
     return (
@@ -28,12 +44,20 @@ const Member=({user})=>{
                         <p>{user.businessName}</p>
     
                     </div>
-                    <div className='orders'>orders</div>
+                    <div className='orders'>Products
+                        {sellerProducts?.map((product)=>(
+                            <div>
+                                <p>{product.name}</p>
+                                <p>{product.price}</p>
+                                <p>{product.description}</p>
+                            </div>
+                        ))}
                 </div>
                 <div className='profile-featured'>
-                    <div className='featured-products'><TestElement /></div>
+                    <div className='featured-products'><TestElement user={user}/></div>
                 </div>
             </div>
+        </div>
         </div>
     )
 }
