@@ -26,7 +26,7 @@ const Shop = () => {
         <Link className="shop-links" to="/signin">
           sign in
         </Link>
-        <Link className="shop-links" to="/user">
+        <Link className="shop-links" to="/profile">
           profile
         </Link>
         <Link className="shop-links" to="/">
