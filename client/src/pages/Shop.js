@@ -29,5 +29,5 @@ const Shop = () => {
     </div>
   )
 }
-// pushing
+// onClick to CoffeeDetails within shop function
 export default Shop
