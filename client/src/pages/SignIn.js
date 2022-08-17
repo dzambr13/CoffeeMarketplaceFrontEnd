@@ -5,7 +5,7 @@ import React from 'react'
 
 const SignIn = ({ toggleAuthenticated, setUser, user }) => {
 
-  let msg
+  let msg="this"
 
   const navigate = useNavigate()
   const [formValues, setFormValues] = useState({ email: '', password: '' })
@@ -55,6 +55,10 @@ const SignIn = ({ toggleAuthenticated, setUser, user }) => {
             <button className='signin-button' disabled={!formValues.email || !formValues.password}>
               Sign In
             </button>
+            <div>
+              {msg}
+            </div>
+            
           </form>
         </div>
       </div>
