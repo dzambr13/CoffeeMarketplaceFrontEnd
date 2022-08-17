@@ -15,7 +15,7 @@ const Member=({user, sellerProducts, setSellerProducts, GetSellerProducts, setPr
     useEffect(() => {GetSellerProducts();},[]);
 
     const deleteProduct=async (pd)=>{
-        let res=await Client.delete(`http://localhost:3001/api/products/delete/${pd}`)
+        let res=await Client.delete(`/api/products/delete/${pd}`)
         GetSellerProducts()
     }
 
