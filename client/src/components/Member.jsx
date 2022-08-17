@@ -3,9 +3,13 @@ import React from 'react'
 import axios from 'axios'
 import { useEffect } from 'react'
 import { useState } from 'react'
+import AddNewProduct from '../pages/AddProduct'
+import TestElement from '../pages/TestElement'
 
 
 const Member=({user})=>{
+    console.log(user)
+    console.log(AddNewProduct)
 
 
     return (
@@ -27,7 +31,7 @@ const Member=({user})=>{
                     <div className='orders'>orders</div>
                 </div>
                 <div className='profile-featured'>
-                    <div className='featured-products'>featured products</div>
+                    <div className='featured-products'><TestElement /></div>
                 </div>
             </div>
         </div>

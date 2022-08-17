@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import Client from "../services/api";
 
 const TestElement = () => {
   const [formValues, setFormValues] = useState({
@@ -18,7 +19,7 @@ const TestElement = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let res = await axios.post("http://localhost:3001/api/products", {
+    let res = await Client.post("http://localhost:3001/api/products/create", {
       name: formValues.name,
       units: formValues.units,
       quantity: formValues.quantity,
@@ -27,7 +28,7 @@ const TestElement = () => {
       price: formValues.price,
       description: formValues.description,
     });
-    console.log(res);
+    console.log(res.data);
   };
 
   return (

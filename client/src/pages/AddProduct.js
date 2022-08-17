@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import { CheckSession } from "../services/Auth";
 // import Client from "./api";
 import Roaster from "../components/Roaster";
 import axios from "axios";
@@ -19,19 +20,6 @@ const AddNewProduct = () => {
     description: "",
   });
 
-  /*
-  const [product, setProduct] = useState('')
-  let { pd } = useParams()
-
-
-  useEffect(() => {
-    const getProductById = async () => {
-      let data = await axios.get(`${BASE_URL}/product/${pd}`)
-      setProduct(data.data)
-    }
-    getProductById()
-  }, [])
-  */
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
   };
@@ -49,83 +37,79 @@ const AddNewProduct = () => {
     });
 
     return (
-      <div className="add-product">
-        <div className="add-product">
-          <form className="col" onSubmit={handleSubmit}>
-            <div className="input-wrapper">
-              {/* <label htmlFor="name">~~name~~</label> */}
-              <input
-                onChange={handleChange}
-                name="name"
-                type="text"
-                placeholder="Product name"
-                value={formValues.name}
-                required
-              />
-            </div>
-            <div className="input-wrapper">
-              <input
-                onChange={handleChange}
-                name="units"
-                type="text"
-                placeholder="Units"
-                value={formValues.units}
-                required
-              />
-            </div>
-            <div className="input-wrapper">
-              <input
-                onChange={handleChange}
-                name="quantity"
-                type="text"
-                placeholder="Quantity"
-                value={formValues.quantity}
-                required
-              />
-            </div>
-            <div className="input-wrapper">
-              <input
-                onChange={handleChange}
-                name="texture"
-                type="text"
-                placeholder="texture"
-                value={formValues.texture}
-                required
-              />
-            </div>
-            <div className="input-wrapper">
-              <input
-                onChange={handleChange}
-                name="productImageUrl"
-                type="text"
-                placeholder="firstName"
-                value={formValues.productImageUrl}
-                required
-              />
-            </div>
-            <div className="input-wrapper">
-              <input
-                onChange={handleChange}
-                name="price"
-                type="text"
-                placeholder="Price"
-                value={formValues.price}
-                required
-              />
-            </div>
-            <div className="input-wrapper">
-              <input
-                onChange={handleChange}
-                name="description"
-                type="text"
-                placeholder="Description"
-                value={formValues.description}
-                required
-              />
-            </div>
-          </form>
+      <form className="col" onSubmit={handleSubmit}>
+        <div className="input-wrapper">
+          {/* <label htmlFor="name">~~name~~</label> */}
+          <input
+            onChange={handleChange}
+            name="name"
+            type="text"
+            placeholder="Product name"
+            value={formValues.name}
+            required
+          />
         </div>
-      </div>
+        <div className="input-wrapper">
+          <input
+            onChange={handleChange}
+            name="units"
+            type="text"
+            placeholder="Units"
+            value={formValues.units}
+            required
+          />
+        </div>
+        <div className="input-wrapper">
+          <input
+            onChange={handleChange}
+            name="quantity"
+            type="text"
+            placeholder="Quantity"
+            value={formValues.quantity}
+            required
+          />
+        </div>
+        <div className="input-wrapper">
+          <input
+            onChange={handleChange}
+            name="texture"
+            type="text"
+            placeholder="texture"
+            value={formValues.texture}
+            required
+          />
+        </div>
+        <div className="input-wrapper">
+          <input
+            onChange={handleChange}
+            name="productImageUrl"
+            type="text"
+            placeholder="firstName"
+            value={formValues.productImageUrl}
+            required
+          />
+        </div>
+        <div className="input-wrapper">
+          <input
+            onChange={handleChange}
+            name="price"
+            type="text"
+            placeholder="Price"
+            value={formValues.price}
+            required
+          />
+        </div>
+        <div className="input-wrapper">
+          <input
+            onChange={handleChange}
+            name="description"
+            type="text"
+            placeholder="Description"
+            value={formValues.description}
+            required
+          />
+        </div>
+      </form>
     );
   };
 };
