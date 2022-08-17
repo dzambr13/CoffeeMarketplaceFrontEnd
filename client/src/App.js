@@ -15,7 +15,7 @@ import { useState, useEffect } from 'react'
 import RegisterAsRoaster from './components/RegisterAsRoaster'
 import AddNewProduct from './pages/AddProduct'
 
-export const App = () => {
+const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
 
@@ -61,4 +61,4 @@ export const App = () => {
 
 export default App
 
-// resolving conflicts
+
