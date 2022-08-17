@@ -2,10 +2,13 @@ import {useState} from 'react'
 import {useEffect} from 'react'
 import Client from '../services/api';
 import axios from 'axios'
+import {useNavigate} from 'react-router-dom'  
 
 const UpdateProduct=({user, sellerProducts, setSellerProducts, productToUpdate})=>{
 
     const [product,setProduct]=useState([])
+
+    const nav=useNavigate()
 
     useEffect(()=>{
         const getProduct=async ()=>{
@@ -32,18 +35,20 @@ const UpdateProduct=({user, sellerProducts, setSellerProducts, productToUpdate})
     
     const handleSubmit = async (e) => {
         e.preventDefault();
-        let res = await Client.post("http://localhost:3001/api/products/create", {
+        let res = await Client.put(`http://localhost:3001/api/products/update/${product.id}`, {
+
         name: formValues.name,
         units: formValues.units,
         quantity: formValues.quantity,
         texture: formValues.texture,
         productImageUrl: formValues.productImageUrl,
         price: formValues.price,
-        description: formValues.description,
-        roasterId: user.id,
+        description: formValues.description
         });
         let temp=[...sellerProducts,res.data]
         setSellerProducts(temp)
+        nav('/profile')
+
     
     };
 
@@ -68,7 +73,7 @@ const UpdateProduct=({user, sellerProducts, setSellerProducts, productToUpdate})
             onChange={handleChange}
             name="units"
             type="text"
-            placeholder="Units"
+            placeholder={product.units}
             value={formValues.units}
             required
           />
@@ -78,7 +83,7 @@ const UpdateProduct=({user, sellerProducts, setSellerProducts, productToUpdate})
             onChange={handleChange}
             name="quantity"
             type="text"
-            placeholder="Quantity"
+            placeholder={product.quantity}
             value={formValues.quantity}
             required
           />
@@ -88,7 +93,7 @@ const UpdateProduct=({user, sellerProducts, setSellerProducts, productToUpdate})
             onChange={handleChange}
             name="texture"
             type="text"
-            placeholder="texture"
+            placeholder={product.texture}
             value={formValues.texture}
             required
           />
@@ -98,7 +103,7 @@ const UpdateProduct=({user, sellerProducts, setSellerProducts, productToUpdate})
             onChange={handleChange}
             name="productImageUrl"
             type="text"
-            placeholder="Image Url"
+            placeholder={product.productImageUrl}
             value={formValues.productImageUrl}
             required
           />
@@ -108,7 +113,7 @@ const UpdateProduct=({user, sellerProducts, setSellerProducts, productToUpdate})
             onChange={handleChange}
             name="price"
             type="text"
-            placeholder="Price"
+            placeholder={product.price}
             value={formValues.price}
             required
           />
@@ -118,12 +123,12 @@ const UpdateProduct=({user, sellerProducts, setSellerProducts, productToUpdate})
             onChange={handleChange}
             name="description"
             type="text"
-            placeholder="Description"
+            placeholder={product.description}
             value={formValues.description}
             required
           />
         </div>
-        <button disabled={!formValues.name}>update</button>
+        <button>update</button>
       </form>
     </div>
     )
