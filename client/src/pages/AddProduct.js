@@ -49,94 +49,84 @@ const AddNewProduct = () => {
     });
 
     return (
-
       <div className="add-product">
-
-      <div className='add-product'>
-
-        <form className="col" onSubmit={handleSubmit}>
-          <div className="input-wrapper">
-            {/* <label htmlFor="name">~~name~~</label> */}
-            <input
-              onChange={handleChange}
-              name="name"
-              type="text"
-              placeholder="Product name"
-              value={formValues.name}
-              required
-            />
-          </div>
-          <div className="input-wrapper">
-            <input
-              onChange={handleChange}
-              name="units"
-              type="text"
-              placeholder="Units"
-              value={formValues.units}
-              required
-            />
-          </div>
-          <div className="input-wrapper">
-            <input
-              onChange={handleChange}
-              name="quantity"
-              type="text"
-              placeholder="Quantity"
-              value={formValues.quantity}
-              required
-            />
-          </div>
-          <div className="input-wrapper">
-            <input
-              onChange={handleChange}
-              name="texture"
-              type="text"
-              placeholder="texture"
-              value={formValues.texture}
-              required
-            />
-          </div>
-          <div className="input-wrapper">
-            <input
-              onChange={handleChange}
-              name="productImageUrl"
-              type="text"
-              placeholder="firstName"
-              value={formValues.productImageUrl}
-              required
-            />
-          </div>
-          <div className="input-wrapper">
-            <input
-              onChange={handleChange}
-              name="price"
-              type="text"
-              placeholder="Price"
-              value={formValues.price}
-              required
-            />
-          </div>
-          <div className="input-wrapper">
-            <input
-              onChange={handleChange}
-              name="description"
-              type="text"
-              placeholder="Description"
-              value={formValues.description}
-              required
-            />
-          </div>
-        </form>
-
+        <div className="add-product">
+          <form className="col" onSubmit={handleSubmit}>
+            <div className="input-wrapper">
+              {/* <label htmlFor="name">~~name~~</label> */}
+              <input
+                onChange={handleChange}
+                name="name"
+                type="text"
+                placeholder="Product name"
+                value={formValues.name}
+                required
+              />
+            </div>
+            <div className="input-wrapper">
+              <input
+                onChange={handleChange}
+                name="units"
+                type="text"
+                placeholder="Units"
+                value={formValues.units}
+                required
+              />
+            </div>
+            <div className="input-wrapper">
+              <input
+                onChange={handleChange}
+                name="quantity"
+                type="text"
+                placeholder="Quantity"
+                value={formValues.quantity}
+                required
+              />
+            </div>
+            <div className="input-wrapper">
+              <input
+                onChange={handleChange}
+                name="texture"
+                type="text"
+                placeholder="texture"
+                value={formValues.texture}
+                required
+              />
+            </div>
+            <div className="input-wrapper">
+              <input
+                onChange={handleChange}
+                name="productImageUrl"
+                type="text"
+                placeholder="firstName"
+                value={formValues.productImageUrl}
+                required
+              />
+            </div>
+            <div className="input-wrapper">
+              <input
+                onChange={handleChange}
+                name="price"
+                type="text"
+                placeholder="Price"
+                value={formValues.price}
+                required
+              />
+            </div>
+            <div className="input-wrapper">
+              <input
+                onChange={handleChange}
+                name="description"
+                type="text"
+                placeholder="Description"
+                value={formValues.description}
+                required
+              />
+            </div>
+          </form>
+        </div>
       </div>
     );
   };
 };
 export default AddNewProduct;
-
-        </div>
-    )
-  }
-}
-export default AddNewProduct
-
