@@ -16,5 +16,5 @@ const CoffeeCard=({Product, UpdateProduct, DeleteProduct, index})=>{
         </div>
     )
 }
-
+// line 8-11, make input values?
 export default CoffeeCard

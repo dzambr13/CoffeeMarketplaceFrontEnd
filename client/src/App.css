@@ -203,8 +203,8 @@ a {
   align-items: center;
 }
 .shop{
-  height:100vh;
-  width:100vw;
+  /* height:100vh;
+  width:100vw; */
   margin:0;
   padding:0;
   display:grid;
@@ -214,7 +214,11 @@ a {
 }
 
 .ShopSearch{
-  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 60vh;
+  margin-left: 40vw;
 }
 
 .shop-navigation{

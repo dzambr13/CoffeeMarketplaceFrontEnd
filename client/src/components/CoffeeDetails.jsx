@@ -9,7 +9,7 @@ const CoffeeDetails = (props) => {
 
     const [coffee, setCoffee] = useState('')
     let { id } = useParams()
-    console.log('testing use effect')
+    // console.log('testing use effect')
 
     useEffect (() => {
         const getCoffeeById = async () => {
@@ -19,8 +19,6 @@ const CoffeeDetails = (props) => {
         }
         getCoffeeById()
     }, [])
-
-const CoffeeDetails=()=>{
 
     return (
         <div className="coffee-details">
@@ -34,5 +32,5 @@ const CoffeeDetails=()=>{
     )
 
 }
-}
+
 export default CoffeeDetails
