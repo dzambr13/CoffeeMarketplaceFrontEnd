@@ -16,15 +16,9 @@ import { useState, useEffect } from "react";
 import RegisterAsRoaster from "./components/RegisterAsRoaster";
 import AddNewProduct from "./pages/AddProduct";
 
-
-export const App = () => {
+const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
-
-const App = () => {
-  const [authenticated, toggleAuthenticated] = useState(false)
-  const [user, setUser] = useState(null)
-
 
   const checkToken = async () => {
     const user = await CheckSession();
@@ -68,5 +62,3 @@ const App = () => {
 };
 
 export default App;
-
-
