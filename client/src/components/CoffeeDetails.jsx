@@ -23,7 +23,7 @@ const CoffeeDetails = (props) => {
     return (
         <div className="coffee-details">
             
-            <img src="https://i.imgur.com/ZZMyp0V.jpg" alt="product image"/>
+            <img className="CoffeeImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/1200px-A_small_cup_of_coffee.JPG" alt="product image"/>
             <p> Coffee Details <br/></p>
             <p> Price<br/></p>
             <p> Contact roaster here<br/></p>

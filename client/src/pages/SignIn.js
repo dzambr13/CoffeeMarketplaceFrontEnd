@@ -4,25 +4,30 @@ import { useNavigate } from 'react-router-dom'
 import React from 'react'
 
 const SignIn = ({ toggleAuthenticated, setUser, user }) => {
-
   const navigate = useNavigate()
   const [formValues, setFormValues] = useState({ email: '', password: '' })
 
   const handleChange = e => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value })
   }
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {
     e.preventDefault()
+    console.log(formValues)
     const payload = await SignInUser(formValues)
+
     setFormValues({email: '',password: ''})
     await setUser(payload.user)
+
+    setFormValues({ email: '', password: '' })
+    await setUser(payload)
+
     toggleAuthenticated(true)
     navigate('/profile')
   }
 
   return (
-    <div className='sign-in-page'>
-      <div className='signin-nav'></div>
+    <div className="sign-in-page">
+      <div className="signin-nav"></div>
       <div className="signin-col">
         <div className="card-overlay centered">
           <form className="col" onSubmit={handleSubmit}>
@@ -47,13 +52,13 @@ const SignIn = ({ toggleAuthenticated, setUser, user }) => {
                 required
               />
             </div>
-            <button className='signin-button' disabled={!formValues.email || !formValues.password}>
+            <button
+              className="signin-button"
+              disabled={!formValues.email || !formValues.password}
+            >
               Sign In
             </button>
-            <div>
-
-            </div>
-            
+            <div></div>
           </form>
         </div>
       </div>
