@@ -1,9 +1,26 @@
-import { useState } from 'react'
-import { SignInUser } from '../services/Auth'
-import { useNavigate } from 'react-router-dom'
-import React from 'react'
+import { useState } from "react";
+import { SignInUser } from "../services/Auth";
+import { useNavigate } from "react-router-dom";
+import React from "react";
 
 const SignIn = ({ toggleAuthenticated, setUser, user }) => {
+
+  const navigate = useNavigate();
+  const [formValues, setFormValues] = useState({ email: "", password: "" });
+
+  const handleChange = (e) => {
+    setFormValues({ ...formValues, [e.target.name]: e.target.value });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(formValues);
+    const payload = await SignInUser(formValues);
+    setFormValues({ email: "", password: "" });
+    await setUser(payload);
+    toggleAuthenticated(true);
+    navigate("/profile");
+  };
+
 
   const navigate = useNavigate()
   const [formValues, setFormValues] = useState({ email: '', password: '' })
@@ -19,6 +36,7 @@ const SignIn = ({ toggleAuthenticated, setUser, user }) => {
     toggleAuthenticated(true)
     navigate('/profile')
   }
+
 
   return (
     <div className='sign-in-page'>
@@ -58,7 +76,7 @@ const SignIn = ({ toggleAuthenticated, setUser, user }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SignIn
+export default SignIn;

@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { useParams } from 'react-router-dom'
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 // import Client from "./api";
-import Roaster from '../components/Roaster'
-import axios from 'axios'
-const BASE_URL = '/api'
+import Roaster from "../components/Roaster";
+import axios from "axios";
+const BASE_URL = "/api";
 
 const AddNewProduct = () => {
-  let navigate = useNavigate()
+  let navigate = useNavigate();
 
   const [formValues, setFormValues] = useState({
-    name: '',
-    units: '',
-    quantity: '',
-    texture: '',
-    productImageUrl: '',
-    price: '',
-    description: ''
-  })
+    name: "",
+    units: "",
+    quantity: "",
+    texture: "",
+    productImageUrl: "",
+    price: "",
+    description: "",
+  });
 
   /*
   const [product, setProduct] = useState('')
@@ -33,11 +33,11 @@ const AddNewProduct = () => {
   }, [])
   */
   const handleChange = (e) => {
-    setFormValues({ ...formValues, [e.target.name]: e.target.value })
-  }
+    setFormValues({ ...formValues, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     await AddNewProduct({
       name: formValues.name,
       units: formValues.units,
@@ -45,11 +45,15 @@ const AddNewProduct = () => {
       texture: formValues.texture,
       productImageUrl: formValues.productImageUrl,
       price: formValues.price,
-      description: formValues.description
-    })
+      description: formValues.description,
+    });
 
     return (
+
+      <div className="add-product">
+
       <div className='add-product'>
+
         <form className="col" onSubmit={handleSubmit}>
           <div className="input-wrapper">
             {/* <label htmlFor="name">~~name~~</label> */}
@@ -123,8 +127,16 @@ const AddNewProduct = () => {
             />
           </div>
         </form>
+
+      </div>
+    );
+  };
+};
+export default AddNewProduct;
+
         </div>
     )
   }
 }
 export default AddNewProduct
+
