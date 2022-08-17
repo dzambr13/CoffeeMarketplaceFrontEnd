@@ -5,8 +5,6 @@ import React from 'react'
 
 const SignIn = ({ toggleAuthenticated, setUser, user }) => {
 
-  let msg="this"
-
   const navigate = useNavigate()
   const [formValues, setFormValues] = useState({ email: '', password: '' })
 
@@ -15,14 +13,11 @@ const SignIn = ({ toggleAuthenticated, setUser, user }) => {
   }
   const handleSubmit = async (e) => {
     e.preventDefault()
-    try{
-      const payload = await SignInUser(formValues)
-      console.log("payload=",payload)
-      setFormValues({email: '',password: ''})
-      await setUser(payload)
-      toggleAuthenticated(true)
-      navigate('/profile')
-    }catch{console.log('user does exist')}
+    const payload = await SignInUser(formValues)
+    setFormValues({email: '',password: ''})
+    await setUser(payload)
+    toggleAuthenticated(true)
+    navigate('/profile')
   }
 
   return (
@@ -56,7 +51,7 @@ const SignIn = ({ toggleAuthenticated, setUser, user }) => {
               Sign In
             </button>
             <div>
-              {msg}
+
             </div>
             
           </form>
