@@ -13,6 +13,7 @@ const Home = ({ user, authenticated }) => {
                 <Link className='link' to='/register'>create an account</Link>
                 <Link className='link' to='/signin'>sign in</Link>
                 <Link className='link' to='/shop'>browse</Link>
+                <Link className='link' to='/user/addproduct'>add product</Link>
             </div>
             <div className='home-featured-container'>
                 <div className='home-featured'>
