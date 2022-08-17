@@ -281,3 +281,36 @@ a {
   background:black;
   color:white;
 }
+.sign-in-page{
+  height:100vh;
+  width:100vw;
+  background: #feffff;
+  display: grid;
+  grid-template:
+    20px 50px 0.25fr 2fr 1fr/
+    100px 1fr 100px;
+  border: none;
+  border-radius: 0px;
+}
+.signin{
+  grid-area:4/2/4/2;
+  border:1px solid black;
+}
+.signin-nav{
+  grid-area:2/1/2/4;
+  background:black;
+}
+.signin-col{
+  border:1px solid black;
+  grid-area:4/2/4/2;
+  display:flex;
+  justify-content:center;
+}
+.signin-button{
+  background:transparent;
+  margin-top:25px;
+}
+.signin-button:hover{
+  background:black;
+  color:white;
+}
