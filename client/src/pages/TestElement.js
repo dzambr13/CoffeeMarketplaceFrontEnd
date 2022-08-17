@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import Client from "../services/api";
 
-const TestElement = ({ user }) => {
+const TestElement = ({ user, sellerProducts, setSellerProducts }) => {
   const [formValues, setFormValues] = useState({
     name: "",
     units: "",
@@ -29,7 +29,9 @@ const TestElement = ({ user }) => {
       description: formValues.description,
       roasterId: user.id,
     });
-    console.log(res.data);
+    let temp=[...sellerProducts,res.data]
+    setSellerProducts(temp)
+
   };
 
   return (

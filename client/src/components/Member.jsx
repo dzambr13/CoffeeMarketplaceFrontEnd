@@ -5,26 +5,27 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import AddNewProduct from '../pages/AddProduct'
 import TestElement from '../pages/TestElement'
+import Client from "../services/api";
 
 
 const Member=({user})=>{
     
     let [sellerProducts, setSellerProducts] = useState([]);
-    
-    useEffect(() => {
-        const GetSellerProducts = async () => {
-        let res = await axios("http://localhost:3001/api/products")
+
+    const GetSellerProducts = async () => {
+        let res = await axios.get("http://localhost:3001/api/products")
         let AllProducts = res.data
         let sp = []
-        AllProducts.map((product)=>{
-            product.roasterId === user.id? sp.push(product):console.log("Not user's product")
-        })
-            
+        AllProducts.map((product)=>{product.roasterId === user.id? sp.push(product):console.log("Not user's product")})  
         setSellerProducts(sp);
-        };
-        GetSellerProducts();
-    }, []);
-    console.log(sellerProducts);
+    };
+    
+    useEffect(() => {GetSellerProducts();}, []);
+
+    const deleteProduct=async (pd)=>{
+        let res=await Client.delete(`http://localhost:3001/api/products/delete/${pd}`)
+        GetSellerProducts()
+    }
     
 
 
@@ -50,11 +51,19 @@ const Member=({user})=>{
                                 <p>{product.name}</p>
                                 <p>{product.price}</p>
                                 <p>{product.description}</p>
+                                <p>{product.id}</p>
+                                <button onClick={(e)=>{deleteProduct(product.id)}}>Delete</button>
+                                <button onClick={(e)=>{deleteProduct(product.id)}}>Update</button>
                             </div>
                         ))}
                 </div>
                 <div className='profile-featured'>
-                    <div className='featured-products'><TestElement user={user}/></div>
+                    <div className='featured-products'><TestElement 
+                        sellerProducts={sellerProducts}
+                        setSellerProducts={setSellerProducts}
+                        user={user}
+                    />
+                    </div>
                 </div>
             </div>
         </div>
