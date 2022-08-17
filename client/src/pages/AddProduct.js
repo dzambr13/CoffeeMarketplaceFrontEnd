@@ -49,7 +49,11 @@ const AddNewProduct = () => {
     });
 
     return (
+
       <div className="add-product">
+
+      <div className='add-product'>
+
         <form className="col" onSubmit={handleSubmit}>
           <div className="input-wrapper">
             {/* <label htmlFor="name">~~name~~</label> */}
@@ -123,8 +127,16 @@ const AddNewProduct = () => {
             />
           </div>
         </form>
+
       </div>
     );
   };
 };
 export default AddNewProduct;
+
+        </div>
+    )
+  }
+}
+export default AddNewProduct
+
