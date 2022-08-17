@@ -26,12 +26,10 @@ const Shop = () => {
         <Link className="shop-links" to="/signin">
           sign in
         </Link>
-        <Link className="shop-links" to="/user">
-          profile
-        </Link>
         <Link className="shop-links" to="/">
           home
         </Link>
+        <Link className="shop-links" to='/profile'>profile </Link>
       </div>
 
       <div className="ShopSearch">
