@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import React from 'react'
 import axios from 'axios'
 import { useEffect } from 'react'
@@ -8,26 +8,22 @@ import TestElement from '../pages/TestElement'
 import Client from "../services/api";
 
 
-const Member=({user})=>{
-    
-    let [sellerProducts, setSellerProducts] = useState([]);
+const Member=({user, sellerProducts, setSellerProducts, GetSellerProducts, setProductToUpdate})=>{
 
-    const GetSellerProducts = async () => {
-        let res = await axios.get("http://localhost:3001/api/products")
-        let AllProducts = res.data
-        let sp = []
-        AllProducts.map((product)=>{product.roasterId === user.id? sp.push(product):console.log("Not user's product")})  
-        setSellerProducts(sp);
-    };
+    const nav=useNavigate()
     
-    useEffect(() => {GetSellerProducts();}, []);
+    useEffect(() => {GetSellerProducts();},[]);
 
     const deleteProduct=async (pd)=>{
         let res=await Client.delete(`http://localhost:3001/api/products/delete/${pd}`)
         GetSellerProducts()
     }
-    
 
+    const navToUpdate=(pk)=>{
+        setProductToUpdate(pk)
+        nav('/update-product')
+    }
+    
 
     return (
         <div className="profile-page">
@@ -53,7 +49,7 @@ const Member=({user})=>{
                                 <p>{product.description}</p>
                                 <p>{product.id}</p>
                                 <button onClick={(e)=>{deleteProduct(product.id)}}>Delete</button>
-                                <button onClick={(e)=>{deleteProduct(product.id)}}>Update</button>
+                                <button onClick={(e)=>{navToUpdate(product.id)}}>Update</button>
                             </div>
                         ))}
                 </div>
