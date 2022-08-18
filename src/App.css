@@ -172,7 +172,10 @@ a {
   padding: 0;
   height: 100vh;
   width: 100vw;
-  background-color: white;
+  background: url('CoffeeMugsBG.jpg');
+  background-position: center;
+  background-size: cover;
+
   display: grid;
   font-family:sans-serif;
   grid-template:
@@ -181,20 +184,20 @@ a {
 }
 .profile-links-container {
   grid-area: 2/1/2/4;
-  background: black;
+  background:transparent;
   display: flex;
   justify-content: flex-end;
 }
 .profile-link {
   text-decoration: none;
-  color: white;
+  color:black;
   margin: 15px;
   margin-right: 100px;
-  font-family: sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 .profile {
   grid-area: 4/2/4/2;
-  background: white;
+  background: transparent;
   display: grid;
   grid-template: 1fr/1fr 1fr;
 }
@@ -204,18 +207,18 @@ a {
   justify-content: center;
   align-items: center;
 }
-.info {
+.info,.orders {
   margin: 10px;
-  border: 1px solid black;
   height: 200px;
   width: 80%;
+  background:rgba(255,255,255,0.4);
+  backdrop-filter:blur(10px);
+  border-radius: 10px;
+  border:2px solid rgba(255,255,255,0.2);
+  font-family:'Josefin sans';
+  font-size:small;
 }
-.orders {
-  margin: 10px;
-  border: 1px solid black;
-  height: 200px;
-  width: 80%;
-}
+
 .profile-featured {
   grid-area: 1/1/1/1;
   margin-top: 0px;
@@ -226,12 +229,9 @@ a {
 }
 .featured-products {
   margin: 10px;
-  border: 1px solid black;
 }
 
 .coffee-details {
-  /* display: flex; */
-  /* border: 2px solid black; */
   width: 5vw;
   height: 20vh;
   margin-top: 13vh;
@@ -399,9 +399,14 @@ h1 {
 }
 .welcome-user {
   grid-area: 1/1/1/1;
-  font-family: sans-serif;
+  font-family: 'Josefin sans';
+  font-weight: bold;
   font-size: 30px;
   height: 30px;
+  width:500px;
+  color:white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  
 }
 .aisle{
   /* margin-top:20px; */
@@ -464,5 +469,78 @@ h1 {
   border-bottom: 1px solid rgb(77, 77, 77);
 }
 
+#add-new-product{
+  height:450px;
+  width:230px;
+  display:flex;
+  justify-content: space-between;
+  align-items: space-between;
+  font-family: 'Josefin sans';
+}
+#new-product::placeholder{
+  font-family:'Josefin sans';
+}
+.add-product-title{
+  font-family: 'Josefin sans';
+  margin-bottom:10px;
+}
+#new-product{
+  margin:0;
+}
+.add-product-button{
+  margin-top:10px;
+  width:75px;
+  height:20px;
+  background:transparent;
+  border:none;
+  font-family: 'Josefin sans';
+  justify-content:center;
+  align-items:center;
+}
+.add-product-button:hover{
+  background:black;
+  border-radius:5px;
+  color:white;
+}
+#profile-title{
+  font-size:medium;
+  margin-top:5px;
+}
+.profile-details{
+  margin-top:25px;
+}
+.info{
+  height:150px;
+}
+.seller-product-tile{
+  display:flex;
+  flex-direction: row;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+.seller-product-tile-button{
+  height:25px;
+  width:45px;
+  font-size:x-small;
+  margin:5px;
+  font-family:'Josefin sans';
+  border:none;
+  border-radius:10px;
 
+}
+#info-seller{
+  height:15px;
+  font-size: small;
+  margin:0;
+}
+.seller-product-details{
+  display:flex;
+  flex-direction:column;
+  justify-content: space-evenly;
+  align-items:center;
+}
+.seller-buttons{
+  display: flex;
+  flex-direction: column;
+}
 

@@ -35,10 +35,10 @@ const TestElement = ({ user, sellerProducts, setSellerProducts }) => {
 
   return (
     <div className="add-product">
-      <form className="col" onSubmit={handleSubmit}>
+      <form className="col" id='add-new-product' onSubmit={handleSubmit}>
       <div className='add-product-title'>Add Product</div>
-        <div className="input-wrapper">
-          <input className="add-product-input"
+        <div className="input-wrapper" id='new-product'>
+          <input className="add-product-input" id='new-product'
             onChange={handleChange}
             name="name"
             type="text"
@@ -48,7 +48,7 @@ const TestElement = ({ user, sellerProducts, setSellerProducts }) => {
           />
         </div>
         <div className="input-wrapper">
-          <input className="add-product-input"
+          <input className="add-product-input" id='new-product'
             onChange={handleChange}
             name="units"
             type="text"
@@ -58,7 +58,7 @@ const TestElement = ({ user, sellerProducts, setSellerProducts }) => {
           />
         </div>
         <div className="input-wrapper">
-          <input className="add-product-input"
+          <input className="add-product-input" id='new-product'
             onChange={handleChange}
             name="quantity"
             type="text"
@@ -68,7 +68,7 @@ const TestElement = ({ user, sellerProducts, setSellerProducts }) => {
           />
         </div>
         <div className="input-wrapper">
-          <input className="add-product-input"
+          <input className="add-product-input" id='new-product'
             onChange={handleChange}
             name="texture"
             type="text"
@@ -78,7 +78,7 @@ const TestElement = ({ user, sellerProducts, setSellerProducts }) => {
           />
         </div>
         <div className="input-wrapper">
-          <input className="add-product-input"
+          <input className="add-product-input" id='new-product'
             onChange={handleChange}
             name="productImageUrl"
             type="text"
@@ -88,7 +88,7 @@ const TestElement = ({ user, sellerProducts, setSellerProducts }) => {
           />
         </div>
         <div className="input-wrapper">
-          <input className="add-product-input"
+          <input className="add-product-input" id='new-product'
             onChange={handleChange}
             name="price"
             type="text"
@@ -98,7 +98,7 @@ const TestElement = ({ user, sellerProducts, setSellerProducts }) => {
           />
         </div>
         <div className="input-wrapper">
-          <input className="add-product-input"
+          <input className="add-product-input" id='new-product'
             onChange={handleChange}
             name="description"
             type="text"
