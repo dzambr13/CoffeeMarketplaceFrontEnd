@@ -5,7 +5,7 @@ import axios from 'axios'
 import {useNavigate} from 'react-router-dom'  
 
 const UpdateProduct=({user, sellerProducts, setSellerProducts, productToUpdate})=>{
-
+    //
     const [product,setProduct]=useState([])
 
     const nav=useNavigate()
