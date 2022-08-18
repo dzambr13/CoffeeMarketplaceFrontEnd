@@ -5,7 +5,8 @@ import axios from 'axios'
 import {useNavigate} from 'react-router-dom'  
 
 const UpdateProduct=({user, sellerProducts, setSellerProducts, productToUpdate})=>{
-
+    // this is a random commment
+    // this is another random commment
     const [product,setProduct]=useState([])
 
     const nav=useNavigate()
