@@ -42,6 +42,13 @@ const App = () => {
     toggleAuthenticated(true);
   };
 
+  const handleLogOut = () => {
+    //Reset all auth related state and clear localStorage
+    setUser(null);
+    toggleAuthenticated(false);
+    localStorage.clear();
+  };
+  
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
