@@ -332,3 +332,52 @@ h1 {
   font-size: 30px;
   height:30px;
 }
+.aisle{
+  margin-top:20px;
+  grid-area:4/2/4/2;
+  background:url('glass-background.jpg');
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  
+}
+.coffee-tile{
+  background:rgba(255,255,255,0.2);
+  /* background:white; */
+  backdrop-filter:blur(10px);
+  border-radius: 15px;;
+  margin:15px;
+  height:200px;
+  width:200px;
+  border: 1px solid rgba(255,255,255,0.2);
+  display:grid;
+  grid-template-rows:1fr 1fr 1fr;
+  font-family:sans-serif;
+}
+.coffee-tile:hover{
+  background:rgba(255,255,255,0.4);
+}
+.img-container{
+  grid-row:2;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.coffee-pic{
+  background-image: url('starbucksCoffee.jpg'); 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size:100px 100px; 
+  height:100px;
+  width:100px;
+}
+.shop{
+  height:100vh;
+  background: rgb(47, 47, 47);
+  /* background:url('beans.jpg'); */
+  background:stretch;
+}
+
+
+
+
