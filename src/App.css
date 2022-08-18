@@ -615,3 +615,25 @@ h1 {
   margin-bottom: 15vh;
 }
 
+#icon{
+  background: url('profile.png');
+  background-position: center;
+  background-size:25px;
+  background-repeat:no-repeat;
+  height:20px;
+  width:100px;
+  color:white
+}
+#user{
+  display:flex;
+  color:white;
+  justify-content:center;
+  align-items:center;
+}
+.home-search{
+  display:flex;
+  flex-direction: row-reverse;
+}
+.ShopSearch{
+  display:flex;
+}

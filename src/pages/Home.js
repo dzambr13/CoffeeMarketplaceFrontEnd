@@ -6,6 +6,14 @@ import CoffeeCard from '../components/CoffeeCard'
 const Home = ({ user, authenticated }) => {
   console.log('User = ', user)
 
+  let authNote
+  user?authNote=(
+  <div id='user'>
+    <div id='icon'></div>
+    <div id='user-name'>{user.userName}</div>
+  </div>
+  ):authNote=(<div></div>)
+
   return (
     <div className="home-home">
       <div className="home-navigation">
@@ -22,6 +30,8 @@ const Home = ({ user, authenticated }) => {
         </div>
         <div className="home-search">
           <Search className="home-search-bar" />
+          {authNote}
+
         </div>
       </div>
       <div className="logo"> K o h i </div>

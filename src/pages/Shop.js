@@ -5,7 +5,18 @@ import CoffeeDetails from "../components/CoffeeDetails";
 import Search from "../components/Search";
 import axios from "axios";
 
-const Shop = () => {
+const Shop = ({authenticated,user}) => {
+
+  console.log(user)
+
+  let authNote
+  user?authNote=(
+  <div id='user'>
+    <div id='icon'></div>
+    <div id='user-name'>{user.userName}</div>
+  </div>
+  ):authNote=(<div></div>)
+
   let [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -21,6 +32,7 @@ const Shop = () => {
     <div className="shop">
       <div className="shop-navigation">
         <div className="ShopSearch">
+          {authNote}
           <Search />
         </div>
         <Link className="shop-links" to="/register">create an account</Link>
