@@ -331,9 +331,15 @@ input {
 }
 .complete-reg {
   display: flex;
+
+  margin: 15px;
+  margin-top: 15px;
+  background: black;
+
   margin: 5vh;
   margin-top: 30px;
   background: transparent;
+
   border-radius: 15px;
   color: black;
   font-family: 'Josefin sans';
@@ -352,7 +358,7 @@ input {
 .sign-in-page {
   height: 100vh;
   width: 100vw;
-  background: #feffff;
+  background: url(https://cdna.artstation.com/p/assets/images/images/048/241/338/medium/ramiro-saravia-render-9.jpg?1649556694);
   display: grid;
   grid-template:
     20px 50px 0.25fr 2fr 1fr/
@@ -366,17 +372,37 @@ input {
 }
 .signin-nav {
   grid-area: 2/1/2/4;
-  background: black;
+  background: transparent;
+  color:transparent;
+  display: flex;
+  flex-direction:row-reverse;
+}
+#sign-in-page-link{
+  color:white;
+  font-size: large;
 }
 .signin-col {
-  border: 1px solid black;
   grid-area: 4/2/4/2;
   display: flex;
-  justify-content: center;
+  justify-content:space-around;
+  align-items: center;
+}
+.sigin-col-input{
+  background:rgba(255,255,255,0.4);
+  border:2px solid rgba(255,255,255,0.3);
+  border-radius:10px;
+  padding:10px;
+}
+#sign-in-input{
+  background:transparent;
+  margin-left:20px;
 }
 .signin-button {
   background: transparent;
   margin-top: 25px;
+  font-family: 'Josefin sans';
+  padding:5px;
+  border-radius:10px;
 }
 .signin-button:hover {
   background: black;
