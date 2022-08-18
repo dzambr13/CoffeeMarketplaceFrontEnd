@@ -133,7 +133,7 @@ a {
   width: 100vw;
   background-color: white;
   display: grid;
-
+  font-family:sans-serif;
   grid-template:
     20px 50px 0.05fr 2fr 25px/
     75px 1fr 75px;
@@ -153,7 +153,7 @@ a {
 }
 .profile {
   grid-area: 4/2/4/2;
-  background: antiquewhite;
+  background: white;
   display: grid;
   grid-template: 1fr/1fr 1fr;
 }
@@ -165,19 +165,19 @@ a {
 }
 .info {
   margin: 10px;
-  border: 2px solid black;
+  border: 1px solid black;
   height: 200px;
   width: 80%;
 }
 .orders {
   margin: 10px;
-  border: 2px solid black;
+  border: 1px solid black;
   height: 200px;
   width: 80%;
 }
 .profile-featured {
   grid-area: 1/1/1/1;
-  margin-top: 60px;
+  margin-top: 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -185,9 +185,7 @@ a {
 }
 .featured-products {
   margin: 10px;
-  border: 2px solid black;
-  height: 600px;
-  width: 80%;
+  border: 1px solid black;
 }
 
 .coffee-details {
@@ -229,6 +227,7 @@ a {
 .shop-links {
   margin: 25px;
   font-family: sans-serif;
+  color:white;
 }
 .registration-page {
   height: 100vh;
@@ -266,10 +265,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: space-between;
-  height: 400px;
+  align-items: center;
   padding: 20px;
-  width: 350px;
 }
 .complete-reg {
   margin-top: 15px;
@@ -342,20 +339,16 @@ h1 {
   
 }
 .coffee-tile{
-  background:rgba(255,255,255,0.2);
-  /* background:white; */
-  backdrop-filter:blur(10px);
   border-radius: 15px;;
   margin:15px;
   height:200px;
   width:200px;
-  border: 1px solid rgba(255,255,255,0.2);
   display:grid;
   grid-template-rows:1fr 1fr 1fr;
   font-family:sans-serif;
 }
 .coffee-tile:hover{
-  background:rgba(255,255,255,0.4);
+  border:1px solid black;
 }
 .img-container{
   grid-row:2;
@@ -376,7 +369,13 @@ h1 {
   background:white;
   background:stretch;
 }
-
+.add-product-button{
+  width:100px;
+}
+.add-product-input{
+  border:none;
+  border-bottom: 1px solid rgb(77, 77, 77);
+}
 
 
 
