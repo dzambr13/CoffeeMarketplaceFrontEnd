@@ -17,11 +17,22 @@ const Member = ({ user, sellerProducts, setSellerProducts, GetSellerProducts, se
     return (
         <div className="profile-page">
             <div className='profile-links-container'>
+
+
+                {/* 
+                <Link className='profile-link' to='/shop'>browse</Link>
+                <Link className='profile-link' to='/'>home</Link>
+                <Link className='logout-button' onClick={handleLogout}></Link> 
+                */}
+
+
+
                 {/*
                 <Link className='profile-link' to='/shop'>browse</Link>
                 <Link className='profile-link' to='/'>home</Link>
                 <Link className='logout-button' onClick={handleLogout}></Link>
                 */}
+
             </div>
             <div className='profile'>
                 <p className='welcome-user'>Welcome, {user.userName} </p>
@@ -49,6 +60,9 @@ const Member = ({ user, sellerProducts, setSellerProducts, GetSellerProducts, se
                                 <p>{product.id}</p>
                                 <button onClick={(e) => { deleteProduct(product.id) }}>Delete</button>
                                 <button onClick={(e) => { navToUpdate(product.id) }}>Update</button>
+                            </div>
+                        
+                        ))}
 
                             </div>
                         ))}
@@ -98,9 +112,11 @@ const Member = ({ user, sellerProducts, setSellerProducts, GetSellerProducts, se
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>
     )
 }
+
 export default Member
