@@ -637,3 +637,11 @@ h1 {
 .ShopSearch{
   display:flex;
 }
+#logOutButton{
+  font-family: 'Josefin sans';
+  width:100px;
+  font-size: medium;
+  color:white;
+  background: transparent;
+  border:none
+}

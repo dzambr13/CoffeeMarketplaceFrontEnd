@@ -8,7 +8,6 @@ const Home = ({ user, authenticated, handleLogOut }) => {
 
   let authNote
   let logOutButton
-
   if(user){
     authNote=(
       <div id='user'>
@@ -16,7 +15,7 @@ const Home = ({ user, authenticated, handleLogOut }) => {
         <div id='user-name'>{user.userName}</div>
       </div>)
     logOutButton=(
-      <button onClick={(e)=>{handleLogOut()}}>log out</button>
+      <button id='logOutButton' onClick={(e)=>{handleLogOut()}}>log out</button>
     )
   }else{
     authNote=(<div></div>)

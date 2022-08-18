@@ -5,17 +5,23 @@ import CoffeeDetails from "../components/CoffeeDetails";
 import Search from "../components/Search";
 import axios from "axios";
 
-const Shop = ({authenticated,user}) => {
-
-  console.log(user)
+const Shop = ({authenticated,user,handleLogOut}) => {
 
   let authNote
-  user?authNote=(
-  <div id='user'>
-    <div id='icon'></div>
-    <div id='user-name'>{user.userName}</div>
-  </div>
-  ):authNote=(<div></div>)
+  let logOutButton
+  if(user){
+    authNote=(
+      <div id='user'>
+        <div id='icon'></div>
+        <div id='user-name'>{user.userName}</div>
+      </div>)
+    logOutButton=(
+      <button id='logOutButton' onClick={(e)=>{handleLogOut()}}>log out</button>
+    )
+  }else{
+    authNote=(<div></div>)
+    logOutButton=(<div></div>)
+  }
 
   let [products, setProducts] = useState([]);
 
@@ -40,6 +46,7 @@ const Shop = ({authenticated,user}) => {
         <Link className="shop-links" to="/profile">profile</Link>
         <Link className="shop-links" to="/">home</Link>
         <Link className="shop-links" to="/profile">profile{" "}</Link>
+        {logOutButton}
       </div>
       <div className="aisle">
         {products?.map((product) => (
