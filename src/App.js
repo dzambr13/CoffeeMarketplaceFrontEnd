@@ -22,7 +22,7 @@ const App = () => {
   let [productToUpdate, setProductToUpdate] = useState(0);
 
   const GetSellerProducts = async () => {
-    let res = await axios.get("/api/products");
+    let res = await axios.get("http://localhost:3001/api/products");
     let AllProducts = res.data;
     let sp = [];
     AllProducts.map((product) => {
