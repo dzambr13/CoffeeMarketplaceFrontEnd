@@ -20,17 +20,14 @@ const Shop = () => {
   return (
     <div className="shop">
       <div className="shop-navigation">
+        <div className="ShopSearch">
+          <Search />
+        </div>
         <Link className="shop-links" to="/register">create an account</Link>
         <Link className="shop-links" to="/signin">sign in</Link>
         <Link className="shop-links" to="/profile">profile</Link>
         <Link className="shop-links" to="/">home</Link>
         <Link className="shop-links" to="/profile">profile{" "}</Link>
-      </div>
-
-      <div className="ShopSearch">
-        <Search />
-        {/* <CoffeeCard /> */}
-        <CoffeeDetails />
       </div>
       <div className="aisle">
         {products?.map((product) => (
