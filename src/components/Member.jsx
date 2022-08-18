@@ -58,7 +58,7 @@ const Member = ({ user, sellerProducts, setSellerProducts, GetSellerProducts, se
                                 <button onClick={(e) => { navToUpdate(product.id) }}>Update</button>
                             </div>
                         ))}
-                        <div className='info'>
+                        {/* <div className='info'>
                             <div id='profile-title'>Profile Info</div>
                             <div className='profile-details'>
                                 <p>{user.firstName}  {user.lastName}</p>
@@ -79,7 +79,7 @@ const Member = ({ user, sellerProducts, setSellerProducts, GetSellerProducts, se
                                     </div>
                                 </div>
                             ))}
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
