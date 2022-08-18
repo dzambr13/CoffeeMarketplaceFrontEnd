@@ -532,6 +532,7 @@ h1 {
   display: flex;
   flex-direction: column;
 }
+
 @keyframes flicker {
   0%, 18%, 22%, 25%, 53%, 57%, 100% {
       text-shadow:
