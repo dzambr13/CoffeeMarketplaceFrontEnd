@@ -335,7 +335,7 @@ h1 {
 .aisle{
   margin-top:20px;
   grid-area:4/2/4/2;
-  background:url('glass-background.jpg');
+  background:white;
   display:flex;
   flex-wrap: wrap;
   justify-content:space-around;
@@ -373,8 +373,7 @@ h1 {
 }
 .shop{
   height:100vh;
-  background: rgb(47, 47, 47);
-  /* background:url('beans.jpg'); */
+  background:white;
   background:stretch;
 }
 
