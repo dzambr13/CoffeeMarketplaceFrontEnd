@@ -13,7 +13,7 @@ const UpdateProduct=({user, sellerProducts, setSellerProducts, productToUpdate})
 
     useEffect(()=>{
         const getProduct=async ()=>{
-            let res=await axios.get(`/api/products/${productToUpdate}`)
+            let res=await axios.get(`http://localhost:3001/api/products/${productToUpdate}`)
             setProduct(res.data)
         }
         getProduct()
