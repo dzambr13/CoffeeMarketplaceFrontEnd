@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Search=()=>{
+const Search = () => {
 
     return (
         <div>
 
-            <input className="search-bar" type="text" 
-            placeholder="  search by texture, brand or size"/>
+            <input className="search-bar" type="text"
+                placeholder="Search by texture, brand or size" />
 
         </div>
     )

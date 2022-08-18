@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap");
+
 body {
   /* background-image: url(https://miro.medium.com/max/1400/1*TUj-YLDXBP1Kiiwadww02Q.gif); */
   background-size: cover;
   background-repeat: no-repeat;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .input-wrapper {
@@ -13,6 +16,12 @@ body {
   margin-top: 5vh;
 }
 
+.logo {
+  font-size: 3em;
+  font-weight: 700;
+  grid-area: 2/2/2/2;
+  color: #feffff;
+}
 .RoasterName {
   /* color: white; */
 }
@@ -76,8 +85,37 @@ a {
   color: white;
 }
 
+.search-bar {
+  color: white;
+  font-weight: 400;
+  font-family: "Josefin Sans", sans-serif;
+  width: 300px;
+  height: 20px;
+  margin-left: 50px;
+  border: none;
+  border-bottom: 1px solid white;
+  background: transparent;
+}
+
+.search-bar::placeholder{
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+}
+.home-search-bar {
+  display: flex;
+  margin-bottom: 5;
+  border: none;
+  background: transparent;
+
+}
+
+
 .home {
-  background: #feffff;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(https://cdn.wallpapersafari.com/46/69/Wb9n1Y.jpg);
+  /* background-repeat: no-repeat; */
+  background-size: cover;
   display: grid;
   grid-template:
     20px 50px 0.25fr 2fr 1fr/
@@ -87,28 +125,29 @@ a {
 }
 .home-navigation {
   grid-area: 1/1/1/4;
-  background: black;
+  background: transparent;
   display: flex;
   flex-direction: row-reverse;
-  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-left: 20px;
 }
 .link {
   color: white;
   text-decoration: none;
   margin: 15px;
-  font-family: sans-serif;
+  
 }
 .home-search {
   grid-area: 5/2/5/2;
+  margin-left: 30px;
 }
-.search-bar {
-  width: 400px;
-  height: 20px;
-  border: 2px solid black;
-  border-radius: 10px;
+
+.home-links{
+  font-family: "Josefin Sans", sans-serif;
 }
 .home-featured-container {
-  grid-area: 4/2/4/2;
+  grid-area: 3/2/3/2;
   display: flex;
   justify-content: center;
 }
@@ -123,8 +162,10 @@ a {
   height: 200px;
   width: 150px;
   border: 2px solid black;
+  background-color: #feffff;
   background-size: contain;
   background-position: center;
+  border-radius: 10%;
 }
 .profile-page {
   margin: 0;
@@ -189,22 +230,31 @@ a {
 }
 
 .coffee-details {
-  display: flex;
-  border: 2px solid black;
-  width: 19vw;
+  /* display: flex; */
+  /* border: 2px solid black; */
+  width: 5vw;
+  height: 20vh;
+  margin-top: 13vh;
+  gap: 5;
+  align-items: center;
+  justify-content: space-around;
 }
 .coffee-details > p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-direction: column;
 }
 .CoffeeImage {
-  height: 5vh;
+  height: 8vh;
   width: 5vw;
 }
 .shop {
-  height: 100vh;
-  width: 100vw;
+  /* height: 100vh;
+  width: 100vw; */
+  background:url('glass-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
   display: grid;
@@ -214,7 +264,11 @@ a {
 }
 
 .ShopSearch {
-  display: flex;
+  display: grid;
+  grid-area: 2/1/2/30;
+  /* margin-right: 5vw; */
+  margin: 4vh;
+  padding: 4vh;
 }
 
 .shop-navigation {
@@ -234,10 +288,13 @@ a {
   width: 100vw;
   display: grid;
   grid-template: 50px 1fr / 1fr;
+  background-image: url(https://cdn.wallpapersafari.com/46/69/Wb9n1Y.jpg);
+
 }
 .registration-nav {
   grid-area: 1/1/1/1;
-  background: black;
+  color: black;
+  background: transparent;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -250,23 +307,40 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid black;
   flex-direction: column;
 }
 .input-wrapper {
-  font-size: 15px;
-  font-family: sans-serif;
-  margin: 5px;
   display: flex;
   justify-content: space-between;
+  font-size: large;
+  font-family: "Josefin Sans", sans-serif;
+  background: transparent;
+}
+input {
+  border: none;
+  background-color: transparent;
+  border-bottom: black 1px solid;
+  width: 200px;
 }
 .col {
   margin: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   align-items: center;
   padding: 20px;
+
+  align-items: space-between;
+  height: 500px;
+  padding: 20px;
+  width: 350px;
+  background-color: rgba(255,255,255,0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 3px solid rgba(255,255,255,0.2);
+  
+
 }
 .complete-reg {
   margin-top: 15px;
@@ -327,12 +401,18 @@ h1 {
   grid-area: 1/1/1/1;
   font-family: sans-serif;
   font-size: 30px;
-  height:30px;
+  height: 30px;
 }
 .aisle{
-  margin-top:20px;
+  /* margin-top:20px; */
   grid-area:4/2/4/2;
+
   background:white;
+
+  /* background:url('glass-background.jpg');
+    background-size: cover;
+  background-repeat: no-repeat; */
+
   display:flex;
   flex-wrap: wrap;
   justify-content:space-around;
@@ -366,8 +446,15 @@ h1 {
 }
 .shop{
   height:100vh;
+
   background:white;
   background:stretch;
+
+  background:url('glass-background.jpg');
+    background-size: cover;
+  background-repeat: no-repeat;
+  /* background:url('beans.jpg'); */
+
 }
 .add-product-button{
   width:100px;

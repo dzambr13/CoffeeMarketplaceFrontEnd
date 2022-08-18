@@ -1,33 +1,39 @@
-import { Link } from 'react-router-dom'
-import { useNavigate } from 'react'
-import Search from '../components/Search'
-import CoffeeCard from '../components/CoffeeCard'
+import { Link } from "react-router-dom";
+import { useNavigate } from "react";
+import Search from "../components/Search";
+import CoffeeCard from "../components/CoffeeCard";
 
 const Home = ({ user, authenticated }) => {
-  console.log('User = ', user)
+  console.log("User = ", user);
 
-
-    return (
-        <div className='home'>
-            <div className='home-navigation'>
-                <Link className='link' to='/register'>create an account</Link>
-                <Link className='link' to='/signin'>sign in</Link>
-                <Link className='link' to='/shop'>browse</Link>
-                <Link className='link' to='/user/addproduct'>add product</Link>
-            </div>
-            <div className='home-featured-container'>
-                <div className='home-featured'>
-                    <div className='feature'></div>
-                    <div className='feature'></div>
-                    <div className='feature'></div>
-                </div>
-            </div>
-            <div className='home-search'>
-                <Search className='home-search-bar' />
-            </div>
+  return (
+    <div className="home">
+      <div className="home-navigation">
+      <div className="home-links">
+        <Link className="link" to="/shop">
+          Shop
+        </Link>
+        <Link className="link" to="/register">
+          Sign up
+        </Link>
+        <Link className="link" to="/signin">
+          Sign in
+        </Link>
+        
+          </div>
+        <div className="home-search">
+        <Search className="home-search-bar" />
+      </div>
+      </div>
+      <div className="logo">Kohi</div>
+      <div className="home-featured-container">
+        <div className="home-featured">
+          
         </div>
-    )
+      </div>
+      
+    </div>
+  );
+};
 
-}
-
-export default Home
+export default Home;
