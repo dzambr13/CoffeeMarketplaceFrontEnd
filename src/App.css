@@ -252,7 +252,7 @@ a {
 .shop {
   /* height: 100vh;
   width: 100vw; */
-  background:url('glass-background.jpg');
+  background:url('beans.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
@@ -407,7 +407,7 @@ h1 {
   /* margin-top:20px; */
   grid-area:4/2/4/2;
 
-  background:white;
+  background: transparent;
 
   /* background:url('glass-background.jpg');
     background-size: cover;
@@ -419,6 +419,7 @@ h1 {
   
 }
 .coffee-tile{
+  background-color: white;
   border-radius: 15px;;
   margin:15px;
   height:200px;
@@ -426,9 +427,10 @@ h1 {
   display:grid;
   grid-template-rows:1fr 1fr 1fr;
   font-family:sans-serif;
+  border:3px solid white;
 }
 .coffee-tile:hover{
-  border:1px solid black;
+  border:3px solid darkgreen;
 }
 .img-container{
   grid-row:2;
@@ -450,7 +452,7 @@ h1 {
   background:white;
   background:stretch;
 
-  background:url('glass-background.jpg');
+  background:url('beans.jpg');
     background-size: cover;
   background-repeat: no-repeat;
   /* background:url('beans.jpg'); */
