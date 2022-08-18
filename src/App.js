@@ -36,10 +36,12 @@ const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
 
+
   const checkToken = async () => {
     const user = await CheckSession();
     setUser(user);
     toggleAuthenticated(true);
+
   };
 
   const handleLogOut = () => {
@@ -56,14 +58,14 @@ const App = () => {
     }
   }, []);
 
+
   return (
     <div className="App">
-      {/*<header> <Nav /> </header>*/}
       <main>
         <Routes>
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/user" element={<User />} />
+        <Route path="/shop" element={<Shop user={user} handleLogOut={handleLogOut} />} />
+          <Route path="/" element={<Home user={user} handleLogOut={handleLogOut} />} />
+          <Route path="/user" element={<User authenticated={authenticated}/>} />
           <Route path="/register" element={<Register />} />
           <Route
             path="/signin"
@@ -72,6 +74,7 @@ const App = () => {
                 user={user}
                 setUser={setUser}
                 toggleAuthenticated={toggleAuthenticated}
+                authenticated={authenticated}
               />
             }
           />
@@ -85,10 +88,11 @@ const App = () => {
                 GetSellerProducts={GetSellerProducts}
                 productToUpdate={productToUpdate}
                 setProductToUpdate={setProductToUpdate}
+                authenticated={authenticated}
               />
             }
           />
-          <Route path="/user/addproduct" element={<AddNewProduct />} />
+          <Route path="/user/addproduct" element={<AddNewProduct authenticated={authenticated} />} />
           <Route path="/test" element={<TestElement />} />
           <Route
             path="/update-product"
@@ -97,6 +101,7 @@ const App = () => {
                 sellerProducts={sellerProducts}
                 setSellerProducts={setSellerProducts}
                 productToUpdate={productToUpdate}
+                authenticated={authenticated}
               />
             }
           />

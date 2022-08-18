@@ -620,3 +620,33 @@ h1 {
   margin-bottom: 15vh;
 }
 
+#icon{
+  background: url('profile.png');
+  background-position: center;
+  background-size:40px;
+  background-repeat:no-repeat;
+  height:40px;
+  width:100px;
+  color:white
+}
+#user{
+  display:flex;
+  color:white;
+  justify-content:center;
+  align-items:center;
+}
+.home-search{
+  display:flex;
+  flex-direction: row-reverse;
+}
+.ShopSearch{
+  display:flex;
+}
+#logOutButton{
+  font-family: 'Josefin sans';
+  width:100px;
+  font-size: medium;
+  color:white;
+  background: transparent;
+  border:none
+}
