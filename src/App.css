@@ -270,8 +270,11 @@ a {
   width: 100vw;
   display: grid;
   grid-template: 50px 1fr / 1fr;
-  background-image: url(https://cdn.wallpapersafari.com/46/69/Wb9n1Y.jpg);
-
+  background-image: url(https://cdna.artstation.com/p/assets/images/images/048/241/338/large/ramiro-saravia-render-9.jpg?1649556694);
+  background-size: cover;
+  background-position: center;
+  opacity: 98%;
+  background-repeat: no-repeat;
 }
 .registration-nav {
   grid-area: 1/1/1/1;
@@ -315,28 +318,38 @@ input {
   padding: 20px;
 
   align-items: space-between;
-  height: 500px;
+  height: 600px;
   padding: 20px;
   width: 350px;
-  background-color: rgba(255,255,255,0.4);
+  background-color: rgba(255,255,255,0.5);
   backdrop-filter: blur(10px);
   border-radius: 10px;
-  border: 3px solid rgba(255,255,255,0.2);
+  border: 3px solid rgba(255,255,255,0.4);
   box-shadow:rgb(77, 77, 77);
   
 
 }
 .complete-reg {
   display: flex;
+
   margin: 15px;
   margin-top: 15px;
   background: black;
+
+  margin: 5vh;
+  margin-top: 30px;
+  background: transparent;
+
   border-radius: 15px;
+  color: black;
+  font-family: 'Josefin sans';
 }
 .switch-reg-type {
-  margin-top: -300px;
+  margin-top: -200px;
   background: transparent;
   border: none;
+  color: white;
+  font-size: 1em;
 }
 .switch-reg-type:hover {
   background: black;
@@ -593,5 +606,12 @@ h1 {
   margin-bottom: 15vh;
   padding: 20vh;
 
+}
+
+.card-overlay-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15vh;
 }
 
