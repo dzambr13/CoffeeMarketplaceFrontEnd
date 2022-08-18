@@ -10,7 +10,7 @@ const Shop = () => {
 
   useEffect(() => {
     const GetAllProducts = async () => {
-      let res = await axios("/api/products");
+      let res = await axios("http://localhost:3001/api/products");
       setProducts(res.data);
     };
     GetAllProducts();

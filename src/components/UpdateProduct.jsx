@@ -12,7 +12,7 @@ const UpdateProduct=({user, sellerProducts, setSellerProducts, productToUpdate})
 
     useEffect(()=>{
         const getProduct=async ()=>{
-            let res=await axios.get(`/api/products/${productToUpdate}`)
+            let res=await axios.get(`http://localhost:3001/api/products/${productToUpdate}`)
             setProduct(res.data)
         }
         getProduct()
@@ -35,7 +35,7 @@ const UpdateProduct=({user, sellerProducts, setSellerProducts, productToUpdate})
     
     const handleSubmit = async (e) => {
         e.preventDefault();
-        let res = await Client.put(`/api/products/update/${product.id}`, {
+        let res = await Client.put(`http://localhost:3001/api/products/update/${product.id}`, {
 
         name: formValues.name,
         units: formValues.units,

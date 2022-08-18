@@ -19,7 +19,7 @@ const TestElement = ({ user, sellerProducts, setSellerProducts }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let res = await Client.post("/api/products/create", {
+    let res = await Client.post("http://localhost:3001/api/products/create", {
       name: formValues.name,
       units: formValues.units,
       quantity: formValues.quantity,
