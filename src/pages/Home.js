@@ -3,16 +3,25 @@ import { useNavigate } from 'react'
 import Search from '../components/Search'
 import CoffeeCard from '../components/CoffeeCard'
 
-const Home = ({ user, authenticated }) => {
+const Home = ({ user, authenticated, handleLogOut }) => {
   console.log('User = ', user)
 
   let authNote
-  user?authNote=(
-  <div id='user'>
-    <div id='icon'></div>
-    <div id='user-name'>{user.userName}</div>
-  </div>
-  ):authNote=(<div></div>)
+  let logOutButton
+
+  if(user){
+    authNote=(
+      <div id='user'>
+        <div id='icon'></div>
+        <div id='user-name'>{user.userName}</div>
+      </div>)
+    logOutButton=(
+      <button onClick={(e)=>{handleLogOut()}}>log out</button>
+    )
+  }else{
+    authNote=(<div></div>)
+    logOutButton=(<div></div>)
+  }
 
   return (
     <div className="home-home">
@@ -27,6 +36,7 @@ const Home = ({ user, authenticated }) => {
           <Link className="link" to="/signin">
             Sign in
           </Link>
+          {logOutButton}
         </div>
         <div className="home-search">
           <Search className="home-search-bar" />

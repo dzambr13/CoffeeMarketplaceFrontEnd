@@ -618,9 +618,9 @@ h1 {
 #icon{
   background: url('profile.png');
   background-position: center;
-  background-size:25px;
+  background-size:40px;
   background-repeat:no-repeat;
-  height:20px;
+  height:40px;
   width:100px;
   color:white
 }

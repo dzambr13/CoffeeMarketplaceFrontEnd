@@ -62,10 +62,9 @@ const App = () => {
   return (
     <div className="App">
       <main>
-        <button onClick={(e)=>{handleLogOut()}}>log out</button>
         <Routes>
-        <Route path="/shop" element={<Shop user={user} />} />
-          <Route path="/" element={<Home user={user} />} />
+        <Route path="/shop" element={<Shop user={user} handleLogOut={handleLogOut} />} />
+          <Route path="/" element={<Home user={user} handleLogOut={handleLogOut} />} />
           <Route path="/user" element={<User authenticated={authenticated}/>} />
           <Route path="/register" element={<Register />} />
           <Route
