@@ -10,7 +10,7 @@ const Shop = () => {
 
   useEffect(() => {
     const GetAllProducts = async () => {
-      let res = await axios("http://localhost:3001/api/products");
+      let res = await axios("/api/products");
       setProducts(res.data);
     };
     GetAllProducts();
@@ -26,10 +26,17 @@ const Shop = () => {
         <Link className="shop-links" to="/signin">
           sign in
         </Link>
+
+        <Link className="shop-links" to="/profile">
+          profile
+        </Link>
+
         <Link className="shop-links" to="/">
           home
         </Link>
-        <Link className="shop-links" to='/profile'>profile </Link>
+        <Link className="shop-links" to="/profile">
+          profile{" "}
+        </Link>
       </div>
 
       <div className="ShopSearch">

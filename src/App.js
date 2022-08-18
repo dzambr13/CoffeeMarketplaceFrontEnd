@@ -18,18 +18,20 @@ import AddNewProduct from "./pages/AddProduct";
 import UpdateProduct from "./components/UpdateProduct";
 
 const App = () => {
-
   let [sellerProducts, setSellerProducts] = useState([]);
   let [productToUpdate, setProductToUpdate] = useState(0);
 
   const GetSellerProducts = async () => {
-      let res = await axios.get("http://localhost:3001/api/products")
-      let AllProducts = res.data
-      let sp = []
-      AllProducts.map((product)=>{product.roasterId === user.id? sp.push(product):console.log("Not user's product")})  
-      setSellerProducts(sp);
+    let res = await axios.get("/api/products");
+    let AllProducts = res.data;
+    let sp = [];
+    AllProducts.map((product) => {
+      product.roasterId === user.id
+        ? sp.push(product)
+        : console.log("Not user's product");
+    });
+    setSellerProducts(sp);
   };
-
 
   const [authenticated, toggleAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
@@ -66,11 +68,31 @@ const App = () => {
               />
             }
           />
-          <Route path="/profile" element={<Member user={user} sellerProducts={sellerProducts} setSellerProducts={setSellerProducts} 
-            GetSellerProducts={GetSellerProducts} productToUpdate={productToUpdate} setProductToUpdate={setProductToUpdate}/>} />
+          <Route
+            path="/profile"
+            element={
+              <Member
+                user={user}
+                sellerProducts={sellerProducts}
+                setSellerProducts={setSellerProducts}
+                GetSellerProducts={GetSellerProducts}
+                productToUpdate={productToUpdate}
+                setProductToUpdate={setProductToUpdate}
+              />
+            }
+          />
           <Route path="/user/addproduct" element={<AddNewProduct />} />
           <Route path="/test" element={<TestElement />} />
-          <Route path="/update-product" element={<UpdateProduct sellerProducts={sellerProducts} setSellerProducts={setSellerProducts} productToUpdate={productToUpdate}  />} />
+          <Route
+            path="/update-product"
+            element={
+              <UpdateProduct
+                sellerProducts={sellerProducts}
+                setSellerProducts={setSellerProducts}
+                productToUpdate={productToUpdate}
+              />
+            }
+          />
         </Routes>
       </main>
     </div>
