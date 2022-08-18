@@ -10,7 +10,7 @@ const Shop = () => {
 
   useEffect(() => {
     const GetAllProducts = async () => {
-      let res = await axios("/api/products");
+      let res = await axios("http://localhost:3001/api/products");
       setProducts(res.data);
     };
     GetAllProducts();
@@ -20,23 +20,11 @@ const Shop = () => {
   return (
     <div className="shop">
       <div className="shop-navigation">
-        <Link className="shop-links" to="/register">
-          create an account
-        </Link>
-        <Link className="shop-links" to="/signin">
-          sign in
-        </Link>
-
-        <Link className="shop-links" to="/profile">
-          profile
-        </Link>
-
-        <Link className="shop-links" to="/">
-          home
-        </Link>
-        <Link className="shop-links" to="/profile">
-          profile{" "}
-        </Link>
+        <Link className="shop-links" to="/register">create an account</Link>
+        <Link className="shop-links" to="/signin">sign in</Link>
+        <Link className="shop-links" to="/profile">profile</Link>
+        <Link className="shop-links" to="/">home</Link>
+        <Link className="shop-links" to="/profile">profile{" "}</Link>
       </div>
 
       <div className="ShopSearch">
@@ -44,12 +32,14 @@ const Shop = () => {
         {/* <CoffeeCard /> */}
         <CoffeeDetails />
       </div>
-      <div>
+      <div className="aisle">
         {products?.map((product) => (
-          <div>
+          <div className="coffee-tile">
             <p>{product.name}</p>
-            <p>{product.price}</p>
-            <p>{product.description}</p>
+            <p>${product.price}.99</p>
+            <div className='img-container'>
+              <div className='coffee-pic'></div>
+            </div>
           </div>
         ))}
       </div>
