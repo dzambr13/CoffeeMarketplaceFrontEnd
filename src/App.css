@@ -249,10 +249,10 @@ a {
 
 .ShopSearch {
   display: grid;
-  grid-area: 1/1/1/30;
+  grid-area: 2/1/2/30;
   /* margin-right: 5vw; */
-  margin: 1vh;
-  padding: 1vh;
+  margin: 4vh;
+  padding: 4vh;
 }
 
 .shop-navigation {
