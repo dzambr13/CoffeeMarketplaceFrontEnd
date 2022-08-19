@@ -42,6 +42,7 @@ body {
   display: flex;
   gap: 8vh;
   text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 a {
@@ -263,10 +264,11 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  justify-content: space-between;
 }
 .shop-links {
   margin: 25px;
-  font-family: sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   color:white;
 }
 .registration-page {
@@ -640,8 +642,9 @@ h1 {
 #user{
   display:flex;
   color:white;
-  justify-content:center;
-  align-items:center;
+  justify-content:left;
+  align-items: center;
+  justify-content: left;
 }
 .home-search{
   display:flex;
@@ -649,6 +652,8 @@ h1 {
 }
 .ShopSearch{
   display:flex;
+  justify-content: left;
+  align-items: left;
 }
 #logOutButton{
   font-family: 'Josefin sans';

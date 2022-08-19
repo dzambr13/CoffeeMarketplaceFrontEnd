@@ -51,23 +51,23 @@ const Shop = ({ authenticated, user, handleLogOut }) => {
         {logOutButton}
         {!user && (
           <Link className="shop-links" to="/register">
-            create an account
+            Create an account
           </Link>
         )}
         {!user && (
           <Link className="shop-links" to="/signin">
-            sign in
+            Sign In
           </Link>
         )}
         {/* <Link className="shop-links" to="/profile">
           profile
         </Link> */}
         <Link className="shop-links" to="/">
-          home
+          Home
         </Link>
         {user && (
           <Link className="shop-links" to="/profile">
-            profile
+            Profile
           </Link>
         )}
       </div>
