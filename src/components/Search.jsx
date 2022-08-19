@@ -24,7 +24,9 @@ const Search = () => {
                 handleSearch(e)
             }} onSubmit={(e) => { searchResult(e) }}>
                 <input className="search-bar" type="text"
-                    placeholder="Search Products" />
+
+                    placeholder="Search products" />
+
             </form>
         </div>
     )
