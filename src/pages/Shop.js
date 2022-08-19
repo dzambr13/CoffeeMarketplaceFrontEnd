@@ -85,5 +85,6 @@ const Shop = () => {
     </div>
   )
 }
+}
 // onClick to CoffeeDetails within shop function
 export default Shop
