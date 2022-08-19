@@ -238,7 +238,7 @@ a {
 }
 .shop {
   background-image: url(https://cdna.artstation.com/p/assets/images/images/022/521/258/original/bogdan-mb0sco-coffee-shop-animationfullhd.gif?1575731432);
-  height:fit-content;
+  height:100vh;
   display: grid;
   grid-template:
     0px 50px 0.25fr 2fr/
