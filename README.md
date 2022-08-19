@@ -4,8 +4,8 @@
 
 ## By: James Jewitt, Leon Glaser, Dave Zambrano
 
-[Backend Repo](https://github.com/dzambr13/CofeeMarketplaceBackEnd)
-[Trello board](https://trello.com/b/TCsr67Pj/coffee-tea)
+[Backend Repo](https://github.com/dzambr13/CofeeMarketplaceBackEnd) |
+[Trello board](https://trello.com/b/TCsr67Pj/coffee-tea) |
 [Deployed Version](https://protected-escarpment-45651.herokuapp.com/)
 
 ### James Jewitt
@@ -17,8 +17,8 @@
 ### Leon Glaser
 
 [LinkedIn](https://www.linkedin.com/in/leon-glaser) |
-[GitHub](https://github.com/lnglaser)
-[Twitter](https://twitter.com/sirescapist) |
+[GitHub](https://github.com/lnglaser) |
+[Twitter](https://twitter.com/sirescapist) 
 
 ### Dave Zambrano
 
