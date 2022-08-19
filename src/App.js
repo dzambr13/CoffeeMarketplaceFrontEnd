@@ -8,6 +8,7 @@ import axios from 'axios'
 import SignIn from './pages/SignIn'
 import Member from './components/Member'
 import TestElement from './pages/TestElement'
+import Search from './components/Search'
 
 import { CheckSession } from './services/Auth'
 import React from 'react'
@@ -18,6 +19,8 @@ import AddNewProduct from './pages/AddProduct'
 import UpdateProduct from './components/UpdateProduct'
 
 const App = () => {
+
+  let [products, setProducts] = useState([])
   let [sellerProducts, setSellerProducts] = useState([])
   let [productToUpdate, setProductToUpdate] = useState(0)
 
@@ -62,11 +65,11 @@ const App = () => {
         <Routes>
           <Route
             path="/shop"
-            element={<Shop user={user} handleLogOut={handleLogOut} />}
+            element={<Shop user={user} handleLogOut={handleLogOut} products={products} setProducts={setProducts} />}
           />
           <Route
             path="/"
-            element={<Home user={user} handleLogOut={handleLogOut} />}
+            element={<Home user={user} handleLogOut={handleLogOut} products={products} setProducts={setProducts} />}
           />
           <Route
             path="/user"
