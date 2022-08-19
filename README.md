@@ -26,33 +26,44 @@
 
 ### **_Description_**
 
+#### **Our team will produce a marketplace app for independent coffee roasters to marker their blends directly to customers.**
+
 #####
 
 ---
 
-- technology 1
-- technology 2
-  - sub-category 1
-  - sub-category 2
-- technology 3
+- PostgreSQL
+- Express.js
+- React.js
+- Node.js
+- HTML
+- CSS
+- JavaScript
+- Heroku
 
 ---
 
 ### **_Screenshots_**
 
-##### image header 1
+### Homepage
 
-![Image1](ERD_CoffeeRoasterMarketPlace.png)
+![Homepage](https://cdn.discordapp.com/attachments/994991543712751756/1010173635534803064/unknown.png)
+
+### Shop page
+
+![Shoppage](https://cdn.discordapp.com/attachments/994991543712751756/1010173991710883870/unknown.png)
 
 ---
 
 ### **_Future Updates_**
 
-- [ ] Future Update 1
-- [ ] Future Update 2
-- [x] Completed Update
-- [x] ~~Strikethrough~~ Items Also
+- [] Products get added to profile page
+- [] Get search bar to work in front end
 
 ---
 
 ### **_Credits_**
+
+#### [Heroku] (https://protected-escarpment-45651.herokuapp.com/)
+
+#### [Trello] (https://trello.com/b/TCsr67Pj/coffee-tea)

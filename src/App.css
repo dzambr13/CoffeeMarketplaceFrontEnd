@@ -237,18 +237,23 @@ a {
   width: 5vw;
 }
 .shop {
-  /* height: 100vh;
-  width: 100vw; */
   background-image: url(https://cdna.artstation.com/p/assets/images/images/022/521/258/original/bogdan-mb0sco-coffee-shop-animationfullhd.gif?1575731432);
-  /* background-size: cover;
-  background-repeat: no-repeat; */
-  /* height: 100vh; */
+  height: 100vh;
   /* margin: 0;
   padding: 0; */
   display: grid;
   grid-template:
     0px 50px 0.25fr 2fr/
     50px 1fr 50px;
+    /* height:100vh; */
+
+  /* background:white; */
+  /* background:stretch; */
+
+  /* background-image: url(https://cdna.artstation.com/p/assets/images/images/022/521/258/original/bogdan-mb0sco-coffee-shop-animationfullhd.gif?1575731432); */
+  background-size: cover;
+  background-repeat: repeat;
+  /* background:url('beans.jpg'); */
 }
 
 .ShopSearch {
@@ -484,18 +489,7 @@ h1 {
   height:200px;
   width:150px;
 }
-.shop{
-  /* height:100vh; */
 
-  /* background:white; */
-  /* background:stretch; */
-
-  background-image: url(https://cdna.artstation.com/p/assets/images/images/022/521/258/original/bogdan-mb0sco-coffee-shop-animationfullhd.gif?1575731432);
-  background-size: stretch;
-  background-repeat: no-repeat;
-  /* background:url('beans.jpg'); */
-
-}
 .add-product-button{
   width:100px;
 }
@@ -664,7 +658,7 @@ h1 {
   background: transparent;
   border:none
 }
-.html {
-  background-size: stretch;
+/* .html {
+  background-size: cover;
 
-}
+} */
