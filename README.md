@@ -49,9 +49,13 @@
 
 ![Homepage](https://cdn.discordapp.com/attachments/994991543712751756/1010173635534803064/unknown.png)
 
-### Shop page
+### Shop Page
 
 ![Shoppage](https://cdn.discordapp.com/attachments/994991543712751756/1010173991710883870/unknown.png)
+
+### Profile Page
+
+![Shoppage](https://cdn.discordapp.com/attachments/994991543712751756/1010195274934796378/unknown.png)
 
 ---
 
