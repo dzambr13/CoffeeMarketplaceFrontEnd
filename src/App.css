@@ -239,11 +239,12 @@ a {
 .shop {
   /* height: 100vh;
   width: 100vw; */
-  background: url(https://wallpaperaccess.com/full/2389934.jpg);
+  background-image: url(https://cdna.artstation.com/p/assets/images/images/022/521/258/original/bogdan-mb0sco-coffee-shop-animationfullhd.gif?1575731432);
   /* background-size: cover;
   background-repeat: no-repeat; */
-  margin: 0;
-  padding: 0;
+  /* height: 100vh; */
+  /* margin: 0;
+  padding: 0; */
   display: grid;
   grid-template:
     0px 50px 0.25fr 2fr/
@@ -460,11 +461,11 @@ h1 {
   width:300px;
   display:grid;
   grid-template-rows:1fr 1fr 1fr;
-  font-family:sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   border:3px solid white;
   backdrop-filter: blur(10px);
-  background-color: rgba(255,255,255,0.5);
-  border: 3px solid rgba(255,255,255,0.4);
+  background-color: rgba(255,255,255,0.2);
+  border: 3px solid rgba(255,255,255,0.1);
 }
 .coffee-tile:hover{
   border:3px solid darkgreen;
@@ -484,13 +485,13 @@ h1 {
   width:150px;
 }
 .shop{
-  height:100vh;
+  /* height:100vh; */
 
-  background:white;
-  background:stretch;
+  /* background:white; */
+  /* background:stretch; */
 
-  background:url(https://images.wallpaperscraft.com/image/single/coffee_beans_beans_coffee_206897_1920x1080.jpg);
-    background-size: cover;
+  background-image: url(https://cdna.artstation.com/p/assets/images/images/022/521/258/original/bogdan-mb0sco-coffee-shop-animationfullhd.gif?1575731432);
+  background-size: stretch;
   background-repeat: no-repeat;
   /* background:url('beans.jpg'); */
 
@@ -662,4 +663,8 @@ h1 {
   color:white;
   background: transparent;
   border:none
+}
+.html {
+  background-size: stretch;
+
 }
