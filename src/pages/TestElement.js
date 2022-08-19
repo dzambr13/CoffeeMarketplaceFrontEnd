@@ -19,7 +19,7 @@ const TestElement = ({ user, sellerProducts, setSellerProducts }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let res = await Client.post("/api/products/create", {
+    let res = await Client.post("http://localhost:3001/api/products/create", {
       name: formValues.name,
       units: formValues.units,
       quantity: formValues.quantity,
@@ -35,10 +35,10 @@ const TestElement = ({ user, sellerProducts, setSellerProducts }) => {
 
   return (
     <div className="add-product">
-      <form className="col" onSubmit={handleSubmit}>
-        <div className="input-wrapper">
-          {/* <label htmlFor="name">~~name~~</label> */}
-          <input
+      <form className="col" id='add-new-product' onSubmit={handleSubmit}>
+      <div className='add-product-title'>Add Product</div>
+        <div className="input-wrapper" id='new-product'>
+          <input className="add-product-input" id='new-product'
             onChange={handleChange}
             name="name"
             type="text"
@@ -48,7 +48,7 @@ const TestElement = ({ user, sellerProducts, setSellerProducts }) => {
           />
         </div>
         <div className="input-wrapper">
-          <input
+          <input className="add-product-input" id='new-product'
             onChange={handleChange}
             name="units"
             type="text"
@@ -58,7 +58,7 @@ const TestElement = ({ user, sellerProducts, setSellerProducts }) => {
           />
         </div>
         <div className="input-wrapper">
-          <input
+          <input className="add-product-input" id='new-product'
             onChange={handleChange}
             name="quantity"
             type="text"
@@ -68,7 +68,7 @@ const TestElement = ({ user, sellerProducts, setSellerProducts }) => {
           />
         </div>
         <div className="input-wrapper">
-          <input
+          <input className="add-product-input" id='new-product'
             onChange={handleChange}
             name="texture"
             type="text"
@@ -78,7 +78,7 @@ const TestElement = ({ user, sellerProducts, setSellerProducts }) => {
           />
         </div>
         <div className="input-wrapper">
-          <input
+          <input className="add-product-input" id='new-product'
             onChange={handleChange}
             name="productImageUrl"
             type="text"
@@ -88,7 +88,7 @@ const TestElement = ({ user, sellerProducts, setSellerProducts }) => {
           />
         </div>
         <div className="input-wrapper">
-          <input
+          <input className="add-product-input" id='new-product'
             onChange={handleChange}
             name="price"
             type="text"
@@ -98,7 +98,7 @@ const TestElement = ({ user, sellerProducts, setSellerProducts }) => {
           />
         </div>
         <div className="input-wrapper">
-          <input
+          <input className="add-product-input" id='new-product'
             onChange={handleChange}
             name="description"
             type="text"
@@ -107,7 +107,7 @@ const TestElement = ({ user, sellerProducts, setSellerProducts }) => {
             required
           />
         </div>
-        <button disabled={!formValues.name}>Add</button>
+        <button className='add-product-button' disabled={!formValues.name}>Add</button>
       </form>
     </div>
   );

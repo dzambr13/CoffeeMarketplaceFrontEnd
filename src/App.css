@@ -1,7 +1,12 @@
+@import 'animate.css';
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap");
+
 body {
   /* background-image: url(https://miro.medium.com/max/1400/1*TUj-YLDXBP1Kiiwadww02Q.gif); */
   background-size: cover;
   background-repeat: no-repeat;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .input-wrapper {
@@ -13,21 +18,9 @@ body {
   margin-top: 5vh;
 }
 
-.RoasterName {
-  /* color: white; */
-}
-
-.MainRegister {
-  /* color: white; */
-}
-
 .RegisterPageCSS {
   padding: 2vh;
   font-size: x-large;
-}
-
-.RegisterMember {
-  /* color: white; */
 }
 
 body {
@@ -35,7 +28,7 @@ body {
   padding: 0;
   text-align: center;
 }
-.home,
+
 .auth {
   display: flex;
   align-items: center;
@@ -49,6 +42,7 @@ body {
   display: flex;
   gap: 8vh;
   text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 a {
@@ -76,9 +70,39 @@ a {
   color: white;
 }
 
-.home {
-  background: #feffff;
+.search-bar {
+  color: white;
+  font-weight: 400;
+  font-family: "Josefin Sans", sans-serif;
+  width: 300px;
+  height: 20px;
+  margin-left: 50px;
+  border: none;
+  border-bottom: 1px solid white;
+  background: transparent;
+}
+
+.search-bar::placeholder{
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+}
+.home-search-bar {
+  display: flex;
+  margin-bottom: 5;
+  border: none;
+  background: transparent;
+
+}
+
+
+.home-home {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(https://cdna.artstation.com/p/assets/images/images/022/521/258/original/bogdan-mb0sco-coffee-shop-animationfullhd.gif?1575731432);
+  /* background-repeat: no-repeat; */
+  background-size: cover;
   display: grid;
+
   grid-template:
     20px 50px 0.25fr 2fr 1fr/
     100px 1fr 100px;
@@ -87,28 +111,29 @@ a {
 }
 .home-navigation {
   grid-area: 1/1/1/4;
-  background: black;
+  background: transparent;
   display: flex;
   flex-direction: row-reverse;
-  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-left: 20px;
 }
 .link {
   color: white;
   text-decoration: none;
   margin: 15px;
-  font-family: sans-serif;
+  
 }
 .home-search {
   grid-area: 5/2/5/2;
+  margin-left: 30px;
 }
-.search-bar {
-  width: 400px;
-  height: 20px;
-  border: 2px solid black;
-  border-radius: 10px;
+
+.home-links{
+  font-family: "Josefin Sans", sans-serif;
 }
 .home-featured-container {
-  grid-area: 4/2/4/2;
+  grid-area: 3/2/3/2;
   display: flex;
   justify-content: center;
 }
@@ -123,37 +148,43 @@ a {
   height: 200px;
   width: 150px;
   border: 2px solid black;
+  background-color: #feffff;
   background-size: contain;
   background-position: center;
+  border-radius: 10%;
 }
 .profile-page {
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
   height: 100vh;
   width: 100vw;
-  background-color: white;
-  display: grid;
+  /* background: url('CoffeeMugsBG.jpg'); */
+  background-color: #9BB0B0;
+  background-position: center;
+  background-size: cover;
 
+  display: grid;
+  font-family:sans-serif;
   grid-template:
     20px 50px 0.05fr 2fr 25px/
     75px 1fr 75px;
 }
 .profile-links-container {
   grid-area: 2/1/2/4;
-  background: black;
+  background:transparent;
   display: flex;
   justify-content: flex-end;
 }
 .profile-link {
   text-decoration: none;
-  color: white;
+  color:black;
   margin: 15px;
   margin-right: 100px;
-  font-family: sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 .profile {
   grid-area: 4/2/4/2;
-  background: antiquewhite;
+  background: transparent;
   display: grid;
   grid-template: 1fr/1fr 1fr;
 }
@@ -163,21 +194,21 @@ a {
   justify-content: center;
   align-items: center;
 }
-.info {
+.info,.orders {
   margin: 10px;
-  border: 2px solid black;
   height: 200px;
   width: 80%;
+  background:rgba(255,255,255,0.4);
+  backdrop-filter:blur(10px);
+  border-radius: 10px;
+  border:2px solid rgba(255,255,255,0.2);
+  font-family:'Josefin sans';
+  font-size:small;
 }
-.orders {
-  margin: 10px;
-  border: 2px solid black;
-  height: 200px;
-  width: 80%;
-}
+
 .profile-featured {
   grid-area: 1/1/1/1;
-  margin-top: 60px;
+  margin-top: 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -185,30 +216,35 @@ a {
 }
 .featured-products {
   margin: 10px;
-  border: 2px solid black;
-  height: 600px;
-  width: 80%;
 }
 
 .coffee-details {
-  display: flex;
-  border: 2px solid black;
-  width: 19vw;
+  width: 5vw;
+  height: 20vh;
+  margin-top: 13vh;
+  gap: 5;
+  align-items: center;
+  justify-content: space-around;
 }
 .coffee-details > p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-direction: column;
 }
 .CoffeeImage {
-  height: 5vh;
+  height: 8vh;
   width: 5vw;
 }
 .shop {
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
+  /* height: 100vh;
+  width: 100vw; */
+  background-image: url(https://cdna.artstation.com/p/assets/images/images/022/521/258/original/bogdan-mb0sco-coffee-shop-animationfullhd.gif?1575731432);
+  /* background-size: cover;
+  background-repeat: no-repeat; */
+  /* height: 100vh; */
+  /* margin: 0;
+  padding: 0; */
   display: grid;
   grid-template:
     0px 50px 0.25fr 2fr/
@@ -216,7 +252,11 @@ a {
 }
 
 .ShopSearch {
-  display: flex;
+  display: grid;
+  grid-area: 2/1/2/30;
+  /* margin-right: 5vw; */
+  margin: 4vh;
+  padding: 4vh;
 }
 
 .shop-navigation {
@@ -225,20 +265,28 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  justify-content: space-between;
 }
 .shop-links {
   margin: 25px;
-  font-family: sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  color:white;
 }
 .registration-page {
   height: 100vh;
   width: 100vw;
   display: grid;
   grid-template: 50px 1fr / 1fr;
+  background-image: url(https://cdna.artstation.com/p/assets/images/images/048/241/338/large/ramiro-saravia-render-9.jpg?1649556694);
+  background-position: center;
+  opacity: 98%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .registration-nav {
   grid-area: 1/1/1/1;
-  background: black;
+  color: black;
+  background: transparent;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -251,35 +299,64 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid black;
   flex-direction: column;
 }
 .input-wrapper {
-  font-size: 15px;
-  font-family: sans-serif;
-  margin: 5px;
   display: flex;
   justify-content: space-between;
+  font-size: large;
+  font-family: "Josefin Sans", sans-serif;
+  background: transparent;
+}
+input {
+  border: none;
+  background-color: transparent;
+  border-bottom: black 1px solid;
+  width: 200px;
 }
 .col {
   margin: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  justify-content: space-between;
+
+  align-items: center;
+  padding: 20px;
+
   align-items: space-between;
-  height: 400px;
+  height: 600px;
   padding: 20px;
   width: 350px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255,255,255,0.5);
+  border: 3px solid rgba(255,255,255,0.4);
+  box-shadow:rgb(77, 77, 77);
+  
+
 }
 .complete-reg {
+  display: flex;
+
+  margin: 15px;
   margin-top: 15px;
+  background: black;
+
+  margin: 5vh;
+  margin-top: 30px;
   background: transparent;
+
   border-radius: 15px;
+  color: black;
+  font-family: 'Josefin sans';
 }
 .switch-reg-type {
-  margin-top: -300px;
+  margin-top: -200px;
   background: transparent;
   border: none;
+  color: white;
+  font-size: 1em;
 }
 .switch-reg-type:hover {
   background: black;
@@ -288,13 +365,15 @@ a {
 .sign-in-page {
   height: 100vh;
   width: 100vw;
-  background: #feffff;
+  background: url(https://cdna.artstation.com/p/assets/images/images/048/241/338/medium/ramiro-saravia-render-9.jpg?1649556694);
   display: grid;
   grid-template:
     20px 50px 0.25fr 2fr 1fr/
     100px 1fr 100px;
   border: none;
   border-radius: 0px;
+  background-size: cover;
+  /* background-repeat: no-repeat; */
 }
 .signin {
   grid-area: 4/2/4/2;
@@ -302,24 +381,46 @@ a {
 }
 .signin-nav {
   grid-area: 2/1/2/4;
-  background: black;
+  background: transparent;
+  color:transparent;
+  display: flex;
+  flex-direction:row-reverse;
+}
+#sign-in-page-link{
+  color:white;
+  font-size: large;
 }
 .signin-col {
-  border: 1px solid black;
   grid-area: 4/2/4/2;
   display: flex;
-  justify-content: center;
+  justify-content:space-around;
+  align-items: center;
+}
+.sigin-col-input{
+  background:rgba(255,255,255,0.4);
+  border:2px solid rgba(255,255,255,0.3);
+  border-radius:10px;
+  padding:10px;
+}
+#sign-in-input{
+  background:transparent;
+  margin-left:20px;
 }
 .signin-button {
   background: transparent;
   margin-top: 25px;
-}
-.signin-button:hover {
-  background: black;
+  font-family: 'Josefin sans';
+  padding:5px;
+  border:none;
   color: white;
 }
+.signin-button:hover {
+  background: white;
+  color: black;
+  border-radius: 10px
+}
 .add-product {
-  height: 500px;
+  height: 600px;
   width: 300px;
   background: transparent;
 }
@@ -328,7 +429,242 @@ h1 {
 }
 .welcome-user {
   grid-area: 1/1/1/1;
-  font-family: sans-serif;
+  font-family: 'Josefin sans';
+  font-weight: bold;
   font-size: 30px;
-  height:30px;
+  height: 30px;
+  width:500px;
+  color:white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  
+}
+.aisle{
+  /* margin-top:20px; */
+  grid-area:4/2/4/2;
+
+  background: transparent;
+
+  /* background:url('glass-background.jpg');
+    background-size: cover;
+  background-repeat: no-repeat; */
+
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  
+}
+.coffee-tile{
+  background-color: white;
+  border-radius: 15px;;
+  margin:15px;
+  height:300px;
+  width:300px;
+  display:grid;
+  grid-template-rows:1fr 1fr 1fr;
+  font-family: "Josefin Sans", sans-serif;
+  border:3px solid white;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255,255,255,0.2);
+  border: 3px solid rgba(255,255,255,0.1);
+}
+.coffee-tile:hover{
+  border:3px solid darkgreen;
+}
+.img-container{
+  grid-row:2;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.coffee-pic{
+  background-image: url('Coffee Bags Mockups(1).png'); 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size:100px 200px; 
+  height:200px;
+  width:150px;
+}
+.shop{
+  /* height:100vh; */
+
+  /* background:white; */
+  /* background:stretch; */
+
+  background-image: url(https://cdna.artstation.com/p/assets/images/images/022/521/258/original/bogdan-mb0sco-coffee-shop-animationfullhd.gif?1575731432);
+  background-size: stretch;
+  background-repeat: no-repeat;
+  /* background:url('beans.jpg'); */
+
+}
+.add-product-button{
+  width:100px;
+}
+.add-product-input{
+  border:none;
+  border-bottom: 1px solid rgb(77, 77, 77);
+}
+
+#add-new-product{
+  height:500px;
+  width:230px;
+  display:flex;
+  justify-content: space-between;
+  align-items: space-between;
+  font-family: 'Josefin sans';
+}
+#new-product::placeholder{
+  font-family:'Josefin sans';
+}
+.add-product-title{
+  font-family: 'Josefin sans';
+  margin-bottom:10px;
+}
+#new-product{
+  margin:0;
+}
+.add-product-button{
+  margin-top:10px;
+  width:75px;
+  height:20px;
+  background:transparent;
+  border:none;
+  font-family: 'Josefin sans';
+  justify-content:center;
+  align-items:center;
+}
+.add-product-button:hover{
+  background:black;
+  border-radius:5px;
+  color:white;
+}
+#profile-title{
+  font-size:medium;
+  margin-top:5px;
+}
+.profile-details{
+  margin-top:25px;
+}
+.info{
+  height:150px;
+}
+.seller-product-tile{
+  display:flex;
+  flex-direction: row;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+.seller-product-tile-button{
+  height:25px;
+  width:45px;
+  font-size:x-small;
+  margin:5px;
+  font-family:'Josefin sans';
+  border:none;
+  border-radius:10px;
+
+
+}
+#info-seller{
+  height:15px;
+  font-size: small;
+  margin:0;
+}
+.seller-product-details{
+  display:flex;
+  flex-direction:column;
+  justify-content: space-evenly;
+  align-items:center;
+}
+.seller-buttons{
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px rgb(255, 255, 255),
+      0 0 80px rgb(255, 255, 255),
+      0 0 90px rgb(255, 255, 255),
+      0 0 100px rgb(255, 255, 255),
+      0 0 150px rgb(255, 255, 255);
+  }
+  20%, 24%, 55% {
+      text-shadow: none;
+  }
+}
+
+.logo {
+  color: rgba(255, 255, 255, 0.491);
+  text-shadow:
+      0 0 7px rgba(255, 255, 255, 0.498),
+      0 0 10px rgba(255, 255, 255, 0.518),
+      0 0 21px rgba(255, 255, 255, 0.497),
+      0 0 42px rgba(255, 255, 255, 0.513),
+      0 0 82px rgba(255, 255, 255, 0.5),
+      0 0 92px rgba(255, 255, 255, 0.475),
+      0 0 102px rgba(255, 255, 255, 0.455),
+      0 0 151px rgba(255, 255, 255, 0.411);
+      /* animation: flicker 2s infinite alternate; */
+      padding: 50px;
+}
+
+.logo {
+  font-size: 10em;
+  font-weight: 700;
+  grid-area: 5/2/5/3;
+  color: #feffff;
+  margin-bottom: 15vh;
+  padding: 20vh;
+  animation: bounce;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.card-overlay-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15vh;
+}
+
+#icon{
+  background: url('profile.png');
+  background-position: center;
+  background-size:40px;
+  background-repeat:no-repeat;
+  height:40px;
+  width:100px;
+  color:white
+}
+#user{
+  display:flex;
+  color:white;
+  justify-content:left;
+  align-items: center;
+  justify-content: left;
+}
+.home-search{
+  display:flex;
+  flex-direction: row-reverse;
+}
+.ShopSearch{
+  display:flex;
+  justify-content: left;
+  align-items: left;
+}
+#logOutButton{
+  font-family: 'Josefin sans';
+  width:100px;
+  font-size: medium;
+  color:white;
+  background: transparent;
+  border:none
+}
+.html {
+  background-size: stretch;
+
 }

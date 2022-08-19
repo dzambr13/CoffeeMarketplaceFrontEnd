@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import {RegisterUser} from '../services/Auth'
 import {useNavigate} from 'react-router-dom'
+//random comment
 
 const RegisterAsRoaster=()=>{
 
@@ -47,7 +48,7 @@ const RegisterAsRoaster=()=>{
 
     return (
         <div className="RoasterName">
-                <div className="card-overlay centered">
+                <div className="card-overlay-centered">
                     <form className="col" onSubmit={handleSubmit}>
                     <div className="input-wrapper">
                         <label htmlFor="name">user name</label>
