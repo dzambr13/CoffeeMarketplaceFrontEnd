@@ -3,7 +3,7 @@ import { useNavigate } from 'react'
 import Search from '../components/Search'
 import CoffeeCard from '../components/CoffeeCard'
 
-const Home = ({ user, authenticated, handleLogOut }) => {
+const Home = ({ user, authenticated, handleLogOut, products, setProducts }) => {
   console.log('User = ', user)
 
   let authNote
@@ -50,7 +50,7 @@ const Home = ({ user, authenticated, handleLogOut }) => {
           {logOutButton}
         </div>
         <div className="home-search">
-          <Search className="home-search-bar" />
+          <Search className="home-search-bar" products={products} setProducts={setProducts}/>
           {authNote}
         </div>
       </div>

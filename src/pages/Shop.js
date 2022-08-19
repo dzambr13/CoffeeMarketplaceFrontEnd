@@ -5,7 +5,8 @@ import CoffeeDetails from '../components/CoffeeDetails'
 import Search from '../components/Search'
 import axios from 'axios'
 
-const Shop = ({ authenticated, user, handleLogOut }) => {
+const Shop = ({ authenticated, user, handleLogOut, setProducts, products }) => {
+
   let authNote
   let logOutButton
   if (user) {
@@ -30,8 +31,6 @@ const Shop = ({ authenticated, user, handleLogOut }) => {
     logOutButton = <div></div>
   }
 
-  let [products, setProducts] = useState([])
-
   useEffect(() => {
     const GetAllProducts = async () => {
       let res = await axios('http://localhost:3001/api/products')
@@ -39,14 +38,13 @@ const Shop = ({ authenticated, user, handleLogOut }) => {
     }
     GetAllProducts()
   }, [])
-  console.log(products)
 
   return (
     <div className="shop">
       <div className="shop-navigation">
         <div className="ShopSearch">
           {authNote}
-          <Search />
+          <Search setProducts={setProducts} products={products} />
         </div>
         {logOutButton}
         {!user && (
@@ -59,9 +57,6 @@ const Shop = ({ authenticated, user, handleLogOut }) => {
             Sign In
           </Link>
         )}
-        {/* <Link className="shop-links" to="/profile">
-          profile
-        </Link> */}
         <Link className="shop-links" to="/">
           Home
         </Link>
