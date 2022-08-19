@@ -51,7 +51,7 @@ const RegisterAsRoaster=()=>{
                 <div className="card-overlay-centered">
                     <form className="col" onSubmit={handleSubmit}>
                     <div className="input-wrapper">
-                        <label htmlFor="name">user name</label>
+                        <label htmlFor="name">Username</label>
                         <input
                         onChange={handleChange}
                         name="userName"
@@ -62,7 +62,7 @@ const RegisterAsRoaster=()=>{
                         />
                     </div>
                     <div className="input-wrapper">
-                        <label htmlFor="businessName">business name</label>
+                        <label htmlFor="businessName">Business Name</label>
                         <input
                         onChange={handleChange}
                         name="businessName"
@@ -73,7 +73,7 @@ const RegisterAsRoaster=()=>{
                         />
                     </div>
                     <div className="input-wrapper">
-                        <label htmlFor="firstName">first name</label>
+                        <label htmlFor="firstName">First Name</label>
                         <input
                         onChange={handleChange}
                         name="firstName"
@@ -84,7 +84,7 @@ const RegisterAsRoaster=()=>{
                         />
                     </div>
                     <div className="input-wrapper">
-                        <label htmlFor="lastName">last name</label>
+                        <label htmlFor="lastName">Last Name</label>
                         <input
                         onChange={handleChange}
                         name="lastName"
@@ -95,7 +95,7 @@ const RegisterAsRoaster=()=>{
                         />
                     </div>
                     <div className="input-wrapper">
-                        <label htmlFor="logoImageUrl">icon</label>
+                        <label htmlFor="logoImageUrl">Icon</label>
                         <input
                         onChange={handleChange}
                         name="logoImageUrl"
@@ -106,7 +106,7 @@ const RegisterAsRoaster=()=>{
                         />
                     </div>
                     <div className="input-wrapper">
-                        <label htmlFor="email">email</label>
+                        <label htmlFor="email">Email</label>
                         <input
                         onChange={handleChange}
                         name="email"
@@ -117,7 +117,7 @@ const RegisterAsRoaster=()=>{
                         />
                     </div>
                     <div className="input-wrapper">
-                        <label htmlFor="password">password</label>
+                        <label htmlFor="password">Password</label>
                         <input
                         onChange={handleChange}
                         type="password"
@@ -127,7 +127,7 @@ const RegisterAsRoaster=()=>{
                         />
                     </div>
                     <div className="input-wrapper">
-                        <label htmlFor="confirmPassword">confirm password</label>
+                        <label htmlFor="confirmPassword">Confirm Password</label>
                         <input
                         onChange={handleChange}
                         type="password"
@@ -143,7 +143,7 @@ const RegisterAsRoaster=()=>{
                             formValues.confirmPassword === formValues.password)
                         }
                     >
-                        register new ROASTER
+                        Register New ROASTER
                     </button>
                     </form>
                 </div>
