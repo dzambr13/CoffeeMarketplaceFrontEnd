@@ -31,7 +31,7 @@ const Member = ({ user, sellerProducts, setSellerProducts, GetSellerProducts, se
                     </div>
                 </div>
                 <div className='profile-info'>
-                    <div className='info'>profile info
+                    {/* <div className='info'>profile info
                         <p>{user.email}</p>
                         <p>{user.firstName}</p>
                         <p>{user.lastName}</p>
@@ -47,7 +47,17 @@ const Member = ({ user, sellerProducts, setSellerProducts, GetSellerProducts, se
                                 <button onClick={(e) => { deleteProduct(product.id) }}>Delete</button>
                                 <button onClick={(e) => { navToUpdate(product.id) }}>Update</button>
                             </div>
-                        ))}
+
+                        ))} */}
+                    <div className='info'>
+                        <div id='profile-title'>Profile Info</div>
+                        <div className='profile-details'>
+                            <p>{user.firstName}  {user.lastName}</p>
+                            <p>{user.businessName}</p>
+                            <p>{user.email}</p>
+
+                        {/* ))} */}
+
                         {/* <div className='info'>
                             <div id='profile-title'>Profile Info</div>
                             <div className='profile-details'>
@@ -55,25 +65,34 @@ const Member = ({ user, sellerProducts, setSellerProducts, GetSellerProducts, se
                                 <p>{user.businessName}</p>
                                 <p>{user.email}</p>
                             </div>
+
                         </div>
-                        <div className='orders'>Products
-                            {sellerProducts?.map((product) => (
-                                <div className='seller-product-tile'>
-                                    <div className='seller-product-details'>
-                                        <p id='info-seller'>{product.name}</p>
-                                        <p id='info-seller'>{product.description}</p>
-                                    </div>
-                                    <div className='seller-buttons'>
-                                        <button className='seller-product-tile-button' onClick={(e) => { deleteProduct(product.id) }}>Delete</button>
-                                        <button className='seller-product-tile-button' onClick={(e) => { navToUpdate(product.id) }}>Update</button>
-                                    </div>
+                    </div>
+                    <div className='orders'>Products
+                        {sellerProducts?.map((product) => (
+                            <div className='seller-product-tile'>
+                                <div className='seller-product-details'>
+                                    <p id='info-seller'>{product.name}</p>
+                                    <p id='info-seller'>{product.description}</p>
                                 </div>
+
+                                <div className='seller-buttons'>
+                                    <button className='seller-product-tile-button' onClick={(e) => { deleteProduct(product.id) }}>Delete</button>
+                                    <button className='seller-product-tile-button' onClick={(e) => { navToUpdate(product.id) }}>Update</button>
+                                </div>
+                            </div>
+                        ))}
+
                             ))}
                         </div> */}
+
+
                     </div>
                 </div>
             </div>
         </div>
+        // </div>
     )
 }
+// pls
 export default Member
