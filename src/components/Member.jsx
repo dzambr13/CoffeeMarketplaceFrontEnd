@@ -21,7 +21,7 @@ const Member = ({ user, sellerProducts, setSellerProducts, GetSellerProducts, se
     return (
         <div className="profile-page">
             <div className='profile-links-container'>
-                <Link className='profile-link' to='/shop'>browse</Link>
+                <Link className='profile-link' to='/shop'>Shop</Link>
                 <Link className='profile-link' to='/'>home</Link>
             </div>
             <div className='profile'>
