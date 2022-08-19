@@ -55,7 +55,7 @@ const RegisterAsMember = () => {
                         />
                     </div>
                     <div className="input-wrapper">
-                        <label htmlFor="firstName">First name</label>
+                        <label htmlFor="firstName">First Name</label>
                         <input
                             onChange={handleChange}
                             name="firstName"
@@ -98,7 +98,7 @@ const RegisterAsMember = () => {
                         />
                     </div>
                     <div className="input-wrapper">
-                        <label htmlFor="confirmPassword">Confirm password</label>
+                        <label htmlFor="confirmPassword">Confirm Password</label>
                         <input
                             onChange={handleChange}
                             type="password"
@@ -114,7 +114,7 @@ const RegisterAsMember = () => {
                                 formValues.confirmPassword === formValues.password)
                         }
                     >
-                        register new MEMBER
+                        Register New MEMBER
                     </button>
                 </form>
             </div>
