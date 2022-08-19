@@ -17,7 +17,7 @@ const Shop = ({authenticated,user,handleLogOut}) => {
         <div id='user-name'>{user.userName}</div>
       </div>)
     logOutButton=(
-      <button id='logOutButton' onClick={(e)=>{handleLogOut()}}>log out</button>
+      <button id='logOutButton' onClick={(e)=>{handleLogOut()}}>Log Out</button>
     )
   }else{
     authNote=(<div></div>)
@@ -84,6 +84,7 @@ const Shop = () => {
       </div>
     </div>
   )
+}
 }
 // onClick to CoffeeDetails within shop function
 export default Shop
