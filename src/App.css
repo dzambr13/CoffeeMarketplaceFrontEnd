@@ -404,7 +404,7 @@ input {
   margin-top: 25px;
   font-family: 'Josefin sans';
   padding:5px;
-  border-radius:10px;
+  border:none;
 }
 .signin-button:hover {
   background: black;

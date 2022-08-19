@@ -15,7 +15,7 @@ const Home = ({ user, authenticated, handleLogOut }) => {
         <div id='user-name'>{user.userName}</div>
       </div>)
     logOutButton=(
-      <button id='logOutButton' onClick={(e)=>{handleLogOut()}}>log out</button>
+      <button id='logOutButton' onClick={(e)=>{handleLogOut()}}>Log Out</button>
     )
   }else{
     authNote=(<div></div>)
