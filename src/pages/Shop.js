@@ -65,9 +65,11 @@ const Shop = ({ authenticated, user, handleLogOut }) => {
         <Link className="shop-links" to="/">
           home
         </Link>
-        <Link className="shop-links" to="/profile">
-          profile{' '}
-        </Link>
+        {user && (
+          <Link className="shop-links" to="/profile">
+            profile
+          </Link>
+        )}
       </div>
       <div className="aisle">
         {products?.map((product) => (

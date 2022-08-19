@@ -1,3 +1,5 @@
+@import 'animate.css';
+
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap");
 
 body {
@@ -26,7 +28,7 @@ body {
   padding: 0;
   text-align: center;
 }
-.home,
+
 .auth {
   display: flex;
   align-items: center;
@@ -99,6 +101,7 @@ a {
   /* background-repeat: no-repeat; */
   background-size: cover;
   display: grid;
+
   grid-template:
     20px 50px 0.25fr 2fr 1fr/
     100px 1fr 100px;
@@ -406,10 +409,12 @@ input {
   font-family: 'Josefin sans';
   padding:5px;
   border:none;
+  color: white;
 }
 .signin-button:hover {
-  background: black;
-  color: white;
+  background: white;
+  color: black;
+  border-radius: 10px
 }
 .add-product {
   height: 600px;
@@ -449,8 +454,8 @@ h1 {
   background-color: white;
   border-radius: 15px;;
   margin:15px;
-  height:200px;
-  width:200px;
+  height:300px;
+  width:300px;
   display:grid;
   grid-template-rows:1fr 1fr 1fr;
   font-family:sans-serif;
@@ -469,12 +474,12 @@ h1 {
   align-items:center;
 }
 .coffee-pic{
-  background-image: url(https://img.lovepik.com/original_origin_pic/18/12/25/4a04d924e22dea5fb8a2ec1c194f6dea.png_wh300.png); 
+  background-image: url('Coffee Bags Mockups(1).png'); 
   background-position: center; 
   background-repeat: no-repeat; 
-  background-size:100px 100px; 
-  height:100px;
-  width:100px;
+  background-size:100px 200px; 
+  height:200px;
+  width:150px;
 }
 .shop{
   height:100vh;
@@ -611,7 +616,9 @@ h1 {
   color: #feffff;
   margin-bottom: 15vh;
   padding: 20vh;
-
+  animation: bounce;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 
 .card-overlay-centered {
