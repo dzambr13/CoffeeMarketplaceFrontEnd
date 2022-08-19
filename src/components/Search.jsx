@@ -10,8 +10,9 @@ const Search = () => {
         e.preventDefault()
         console.log(search)
         let req = { query: search }
-        let res = await axios.get('http://localhost:3001/api/products/search', req)
-        console.log(res)
+
+        let res = await axios.post('http://localhost:3001/api/products/search', req)
+
     }
 
     const handleSearch = (e) => {
@@ -24,7 +25,9 @@ const Search = () => {
                 handleSearch(e)
             }} onSubmit={(e) => { searchResult(e) }}>
                 <input className="search-bar" type="text"
+
                     placeholder="Search products" />
+
             </form>
         </div>
     )

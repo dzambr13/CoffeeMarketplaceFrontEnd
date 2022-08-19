@@ -14,6 +14,10 @@ const Member = ({ user, sellerProducts, setSellerProducts, GetSellerProducts, se
         setProductToUpdate(pk)
         nav('/update-product')
     }
+
+    // random comment 
+
+
     return (
         <div className="profile-page">
             <div className='profile-links-container'>
@@ -39,14 +43,18 @@ const Member = ({ user, sellerProducts, setSellerProducts, GetSellerProducts, se
                     </div>
                     <div className='orders'>Products
                         {sellerProducts?.map((product) => (
-                            <div>
-                                <p>{product.name}</p>
-                                <p>{product.price}</p>
-                                <p>{product.description}</p>
-                                <p>{product.id}</p>
-                                <button onClick={(e) => { deleteProduct(product.id) }}>Delete</button>
-                                <button onClick={(e) => { navToUpdate(product.id) }}>Update</button>
+                            <div className='seller-product-tile'>
+                            <div className='seller-product-details'>
+                                <p id='info-seller'>{product.name}</p>
+                                <p id='info-seller'>{product.description}</p>
                             </div>
+
+                            <div className='seller-buttons'>
+                                <button className='seller-product-tile-button' onClick={(e) => { deleteProduct(product.id) }}>Delete</button>
+                                <button className='seller-product-tile-button' onClick={(e) => { navToUpdate(product.id) }}>Update</button>
+                            </div>
+                            </div>
+<<<<<<< HEAD
                         ))} */}
                     <div className='info'>
                         <div id='profile-title'>Profile Info</div>
@@ -74,6 +82,8 @@ const Member = ({ user, sellerProducts, setSellerProducts, GetSellerProducts, se
             </div>
         </div>
         // </div>
+
     )
 }
+
 export default Member
